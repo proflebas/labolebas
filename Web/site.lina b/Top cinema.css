@@ -1,0 +1,46 @@
+body, div {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: peachpuff;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+}
+img { 
+	float: left; 
+	margin-right: 20px;
+}
+th { width: 200px;}
+ul { list-style-type: square; }
+
+#entete-de-page {
+	padding: 5px;
+	height: 100px;
+	background-color: bisque;
+	font-size: 32px;
+	font-weight: bold;
+	font-variant: small-caps;
+	text-align: center;
+}
+#bloc-menu {
+	height: 40px;
+	background-color: wheat;
+	float: center;
+	color: black;
+}
+#contenu {
+	padding: 10px;
+	background-color: peachpuff;
+}
+#infos {
+	color: lemonchiffon;
+	font-style: italic;
+}
+#pied-de-page {
+	padding: 5px;
+	background-color: peachpuff;
+	font-size: 11px;
+}paltur
+
+	

@@ -1,0 +1,46 @@
+body, div {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: White;
+	font-family: ComicSansMS, sans-serif;
+	font-size: 18px;
+}
+img { 
+	float: left; 
+	margin-right: 25px;
+}
+th { width: 210px;}
+ul { list-style-type: white; }
+
+#entete-de-page {
+	padding: 2px;
+	height: 130px;
+	background-image: url("https://tse1.mm.bing.net/th?id=OIP.V5OkiP0orvT3qxkZ0TetSgHaCS&pid=Api&P=0&w=669&h=206");
+	font-size: 32px;
+	font-weight: bold;
+	font-variant: small-caps;
+	text-align: center;
+}
+#bloc-menu {
+	height: 36px;
+	background-color: CornflowerBlue;
+	float: center;
+	color: white;
+}
+#contenu {
+	padding: 10px;
+	background-color: White;
+}
+#infos {
+	color: Blue;
+	font-style: italic;
+}
+#pied-de-page {
+	padding: 5px;
+	background-color: White;
+	font-size: 11px;
+}
+
+	

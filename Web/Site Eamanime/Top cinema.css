@@ -1,0 +1,45 @@
+body, div {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-image: url("fruit du demon.jpg");
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+}
+img { 
+	float: left; 
+	margin-right: 20px;
+}
+th { width: 200px;}
+ul { list-style-type: square; }
+
+#entete-de-page {
+	padding: 5px;
+	height: 100px;
+	font-size: 32px;
+	font-weight: bold;
+	font-variant: small-caps;
+	text-align: center;
+}
+#bloc-menu {
+	height: 36px;
+	background-color: lightpink;
+	float: center;
+	color: black;
+}
+#contenu {
+	padding: 10px;
+	background-color: lightblue;
+}
+#infos {
+	color: mistyrose;
+	font-style: italic;
+}
+#pied-de-page {
+	padding: 5px;
+	background-color: lightblue;
+	font-size: 11px;
+}
+
+	
