@@ -1,0 +1,73 @@
+/* Couleurs */
+:root {
+  --couleur-principale: #E54B4B;
+  --couleur-secondaire: #FF8F00;
+  --couleur-tertiaire: #FFE884;
+  --couleur-texte: #333;
+}
+
+/* Polices */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  font-family: 'Fredoka One', cursive;
+}
+
+/* Mise en page */
+header {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-tertiaire);
+  padding: 20px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: var(--couleur-tertiaire);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--couleur-secondaire);
+}
+
+main {
+  background-color: var(--couleur-tertiaire);
+  color: var(--couleur-texte);
+  padding: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 32px;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+audio {
+  width: 100%;
+  margin: 20px 0;
+}
+
+footer {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-tertiaire);
+  padding: 20px;
+  text-align: center;
+}

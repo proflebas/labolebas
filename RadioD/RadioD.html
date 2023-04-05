@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radio'D</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Définition de différentes feuilles de style -->
+    <link rel="stylesheet" href="Style CGPT RadioD.css" title="style1">
+    <link rel="stylesheet" href="Style CGPT RadioD vives.css" title="style2">
+    <link rel="stylesheet" href="Style CGPT RadioD scolaire.css" title="style3">
+    <link rel="stylesheet" href="Style CGPT RadioD scolaire 2.css" title="style4">
+    <link rel="stylesheet" href="Style CGPT RadioD retro.css" title="style5">
+    <link rel="stylesheet" href="Style CGPT RadioD pastel.css" title="style6">
+    <link rel="stylesheet" href="Style CGPT RadioD disco.css" title="style7">
+    <!-- Script pour changer la feuille de style -->
+    <script>
+      function changeStyle() {
+        var select = document.getElementById("styleSelect");
+        var style = select.options[select.selectedIndex].value;
+        var links = document.getElementsByTagName("link");
+        for (var i = 0; i < links.length; i++) {
+          var link = links[i];
+          if (link.getAttribute("title") === style) {
+            link.disabled = false;
+          } else {
+            link.disabled = true;
+          }
+        }
+      }
+    </script>
+</head>
+<body>
+	<header>
+		<h1>Radio'D</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Accueil</a></li>
+				<li><a href="#">Episodes</a></li>
+				<li><a href="#">A propos</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+
+    <!-- Sélecteur de feuille de style -->
+  <label for="styleSelect">Choisir la feuille de style :</label>
+  <select id="styleSelect" onchange="changeStyle()">
+    <option value="style1">Style 1</option>
+    <option value="style2">Style 2</option>
+    <option value="style3">Style 3</option>
+    <option value="style1">Style 4</option>
+    <option value="style2">Style 5</option>
+    <option value="style3">Style 6</option>
+    <option value="style3">Style 7</option>
+    </select>
+
+		<section>
+			<h2>Dernier épisode</h2>
+			<article>
+				<h3>Téléradio</h3>
+				<audio controls>
+					<source src="Episodes/Téléradio - Collége Daudet.wav" type="audio/wav">
+					Votre navigateur ne prend pas en charge l'élément audio.
+				</audio>
+				<p>Episode réalisé par FossaFM avec les élèves des vacances apprenantes de février 2023</p>
+			</article>
+		</section>
+		<section>
+			<h2>Episodes précédents</h2>
+			<article>
+				<h3>Radio Pistache</h3>
+				<audio controls>
+					<source src="Episodes/Radio Pistache.m4a" type="audio/mp3">
+					Votre navigateur ne prend pas en charge l'élément audio.
+				</audio>
+				<p>Episode réalisé par les professeurs du collège lors d'une formation</p>
+			</article>
+			<article>
+				<h3>Dodélirium</h3>
+				<audio controls>
+					<source src="Episodes/Dodélirium.m4a" type="audio/mpeg">
+					Votre navigateur ne prend pas en charge l'élément audio.
+				</audio>
+				<p>Episode réalisé par les professeurs du collège lors d'une formation</p>
+			</article>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Radio'D. Tous droits réservés.</p>
+	</footer>
+
+
+</body>
+</html>

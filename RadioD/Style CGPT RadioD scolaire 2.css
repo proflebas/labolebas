@@ -1,0 +1,1103 @@
+New chat
+HTML Page for Podcast.
+
+
+Radio Names for Daudet
+New chat
+Objet dangereux anus
+Le duc d'Artois
+Retirement speech for mom
+Pourquoi "Les Dix Petits Nègres" ?
+Meilleure chanson Michel Berger
+Clear conversations
+Upgrade to Plus
+Dark mode
+Get help
+Log out
+
+lebas@live.fr
+peux-tu me donner le code html d'une page web faite pour accueillir un podcast ?
+Bien sûr, voici un exemple de code HTML pour une page web destinée à accueillir un podcast :
+
+php
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mon podcast</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Mon podcast</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Accueil</a></li>
+				<li><a href="#">Episodes</a></li>
+				<li><a href="#">A propos</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2>Dernier épisode</h2>
+			<article>
+				<h3>Titre de l'épisode</h3>
+				<audio controls>
+					<source src="episode.mp3" type="audio/mpeg">
+					Votre navigateur ne prend pas en charge l'élément audio.
+				</audio>
+				<p>Description de l'épisode</p>
+			</article>
+		</section>
+		<section>
+			<h2>Episodes précédents</h2>
+			<article>
+				<h3>Titre de l'épisode précédent 1</h3>
+				<audio controls>
+					<source src="episode1.mp3" type="audio/mpeg">
+					Votre navigateur ne prend pas en charge l'élément audio.
+				</audio>
+				<p>Description de l'épisode précédent 1</p>
+			</article>
+			<article>
+				<h3>Titre de l'épisode précédent 2</h3>
+				<audio controls>
+					<source src="episode2.mp3" type="audio/mpeg">
+					Votre navigateur ne prend pas en charge l'élément audio.
+				</audio>
+				<p>Description de l'épisode précédent 2</p>
+			</article>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Mon podcast. Tous droits réservés.</p>
+	</footer>
+</body>
+</html>
+Ce code HTML contient une structure de base pour une page web de podcast. Il comporte un en-tête avec un titre et une barre de navigation, un corps avec la présentation du dernier épisode ainsi que les épisodes précédents, et un pied de page avec des informations de droits d'auteur. Il est également possible de personnaliser le style de la page avec une feuille de style CSS, en lien dans l'en-tête.
+
+
+
+lebas@live.fr
+est-ce que tu pourrais me générer la feuille de style css d'une page web. Le but est d'héberger un podcast pour les jeunes, il faut que ce soit vivant, dynamique, coloré
+Bien sûr, voici un exemple de feuille de style CSS pour une page web de podcast destinée aux jeunes, avec des couleurs vives et un design dynamique :
+
+css
+Copy code
+/* styles pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F2F2F2;
+    margin: 0;
+    padding: 0;
+}
+
+/* styles pour l'en-tête de la page */
+header {
+    background-color: #E91E63;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    color: #FFC107;
+}
+
+/* styles pour le contenu principal */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+article {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+article h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* styles pour le pied de page */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+Ce code CSS utilise des couleurs vives pour l'en-tête, le contenu principal et le pied de page de la page web. Il utilise également des transitions pour les liens de la barre de navigation et des ombres pour les articles du contenu principal, afin de donner un aspect dynamique à la page. Vous pouvez bien sûr modifier ces styles pour les adapter à vos besoins spécifiques.
+
+
+
+lebas@live.fr
+est-ce que tu aurais des variantes plus colorées à me suggérer ?
+Absolument ! Voici quelques exemples de variantes de feuilles de style CSS avec des couleurs vives pour une page de podcast destinée aux jeunes :
+
+Exemple 1 : Couleurs pastel
+
+css
+Copy code
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F6F6F6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #F7A7A7;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    color: #FFB6C1;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+article {
+    background-color: #FDFD96;
+    padding: 20px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+article h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+footer {
+    background-color: #84B0D2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+Exemple 2 : Couleurs vives
+
+css
+Copy code
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F2F2F2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FF6F61;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    color: #FCB900;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+article {
+    background-color: #FFD6BA;
+    padding: 20px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+
+
+
+
+lebas@live.fr
+peux-tu reprendre le code de la page html et y intégrer le choix de la feuille de style par l'utilisateur ?
+
+2 / 2
+
+Bien sûr ! Voici le code HTML avec une option pour permettre à l'utilisateur de choisir sa propre feuille de style :
+
+php
+Copy code
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Podcast pour les jeunes</title>
+    <link rel="stylesheet" href="style.css" id="style">
+</head>
+<body>
+    <header>
+        <h1>Podcast pour les jeunes</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Épisodes</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Dernier épisode</h2>
+            <article>
+                <h3>Titre de l'épisode</h3>
+                <p>Description de l'épisode</p>
+            </article>
+        </section>
+        <section>
+            <h2>Épisodes précédents</h2>
+            <article>
+                <h3>Titre de l'épisode</h3>
+                <p>Description de l'épisode</p>
+            </article>
+            <article>
+                <h3>Titre de l'épisode</h3>
+                <p>Description de l'épisode</p>
+            </article>
+            <article>
+                <h3>Titre de l'épisode</h3>
+                <p>Description de l'épisode</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright © 2023
+        </p>
+    </footer>
+    <script>
+        function setStyle(styleName) {
+            var style = document.getElementById("style");
+            style.setAttribute("href", styleName);
+        }
+    </script>
+</body>
+</html>
+Le code JavaScript permet de changer la feuille de style en fonction de la sélection de l'utilisateur. Il suffit de créer des fichiers CSS supplémentaires pour chaque style et de les lier au menu déroulant de l'utilisateur.
+
+
+
+lebas@live.fr
+il n'y a pas de menu déroulant pour choisir la feuille de style dans ce que tu m'as proposé
+
+4 / 4
+
+Vous avez tout à fait raison, je suis désolé pour cette confusion. Voici le code HTML avec un menu déroulant pour choisir la feuille de style :
+
+php
+Copy code
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Podcast pour les jeunes</title>
+    <link rel="stylesheet" href="style.css" id="style">
+</head>
+<body>
+    <header>
+        <h1>Podcast pour les jeunes</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Épisodes</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Dernier épisode</h2>
+            <article>
+                <h3>Titre de l'épisode</h3>
+                <p>Description de l'épisode</p>
+            </article>
+        </section>
+        <section>
+            <h2>Épisodes précédents</h2>
+            <article>
+                <h3>Titre de l'épisode</h3>
+                <p>Description de l'épisode</p>
+            </article>
+            <article>
+                <h3>Titre de l'épisode</h3>
+                <p>Description de l'épisode</p>
+            </article>
+            <article>
+                <h3>Titre de l'épisode</h3>
+                <p>Description de l'épisode</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright © 2023
+        </p>
+    </footer>
+    <form onchange="setStyle(this.value);">
+        <label for="style">Choisir une feuille de style :</label>
+        <select id="style" name="style">
+            <option value="style.css">Style par défaut</option>
+            <option value="style-vert.css">Style vert</option>
+            <option value="style-rouge.css">Style rouge</option>
+            <option value="style-bleu.css">Style bleu</option>
+        </select>
+    </form>
+    <script>
+        function setStyle(styleName) {
+            var style = document.getElementById("style");
+            style.setAttribute("href", styleName);
+        }
+    </script>
+</body>
+</html>
+Dans ce code, j'ai ajouté un formulaire avec un menu déroulant qui permet à l'utilisateur de choisir sa feuille de style préférée. Le JavaScript reste le même que dans la précédente version, il permet de changer la feuille de style en fonction de la sélection de l'utilisateur. N'hésitez pas à modifier les options dans le menu déroulant pour ajouter ou supprimer des styles selon vos besoins.
+
+
+
+lebas@live.fr
+Je vois le menu déroulant, mais la page ne charge aucune feuille de style, sais-tu pourquoi ?
+Je suis désolé de cette erreur. Cela est probablement dû à une collision de noms entre l'id du menu déroulant et l'id de la feuille de style dans la balise link. Pour éviter cela, il suffit de changer l'id du menu déroulant. Voici le code HTML corrigé :
+
+php
+Copy code
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Podcast pour les jeunes</title>
+    <link rel="stylesheet" href="style.css" id="style">
+</head>
+<body>
+    <header>
+        <h1>Podcast pour les jeunes</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Épisodes</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Dernier épisode</h2>
+            <article>
+                <h3>Titre de l'épisode</h3>
+                <p>Description de l'épisode</p>
+            </article>
+        </section>
+        <section>
+            <h2>Épisodes précédents</h2>
+            <article>
+                <h3>Titre de l'épisode</h3>
+                <p>Description de l'épisode</p>
+            </article>
+            <article>
+                <h3>Titre de l'épisode</h3>
+                <p>Description de l'épisode</p>
+            </article>
+            <article>
+                <h3>Titre de l'épisode</h3>
+                <p>Description de l'épisode</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright © 2023
+        </p>
+    </footer>
+    <form onchange="setStyle(this.value);">
+        <label for="style-selector">Choisir une feuille de style :</label>
+        <select id="style-selector" name="style-selector">
+            <option value="style.css">Style par défaut</option>
+            <option value="style-vert.css">Style vert</option>
+            <option value="style-rouge.css">Style rouge</option>
+            <option value="style-bleu.css">Style bleu</option>
+        </select>
+    </form>
+    <script>
+        function setStyle(styleName) {
+            var style = document.getElementById("style");
+            style.setAttribute("href", styleName);
+        }
+    </script>
+</body>
+</html>
+J'ai simplement changé l'id du menu déroulant en style-selector pour éviter la collision avec l'id de la feuille de style. Cette correction devrait permettre au formulaire de fonctionner correctement.
+
+
+
+lebas@live.fr
+ça ne fonctionne toujours pas. Sais-tu pourquoi ?
+Je suis désolé que cela ne fonctionne toujours pas. Voici quelques raisons pour lesquelles cela pourrait ne pas fonctionner :
+
+Vérifiez que les noms des feuilles de style sont corrects et correspondent exactement aux noms que vous avez spécifiés dans la balise option du menu déroulant.
+Vérifiez que les feuilles de style que vous avez créées sont correctement enregistrées et situées dans le même répertoire que votre fichier HTML.
+Vérifiez que le navigateur que vous utilisez prend en charge les balises link pour inclure des feuilles de style.
+Vérifiez que vous avez bien sauvegardé le code HTML corrigé avec l'ajout du menu déroulant et du script JavaScript.
+Si vous avez vérifié ces éléments et que le problème persiste, n'hésitez pas à me donner plus de détails sur le comportement de la page ou les erreurs que vous rencontrez, afin que je puisse vous aider à trouver une solution.
+
+
+
+lebas@live.fr
+Mon code est maintenant celui ci
+Je ne vois pas le code que vous avez envoyé précédemment, pouvez-vous me le renvoyer ou me donner plus d'informations sur les modifications que vous avez apportées à votre code ? De cette façon, je pourrai mieux comprendre ce qui ne fonctionne pas.
+
+
+
+lebas@live.fr
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radio'D</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Style CGPT RadioD pastel.css" id="style">
+</head>
+<body>
+	<header>
+		<h1>Radio'D</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Accueil</a></li>
+				<li><a href="#">Episodes</a></li>
+				<li><a href="#">A propos</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2>Dernier épisode</h2>
+			<article>
+				<h3>Téléradio</h3>
+				<audio controls>
+					<source src="Episodes/Téléradio - Collége Daudet.wav" type="audio/wav">
+					Votre navigateur ne prend pas en charge l'élément audio.
+				</audio>
+				<p>Description de l'épisode</p>
+			</article>
+		</section>
+		<section>
+			<h2>Episodes précédents</h2>
+			<article>
+				<h3>Radio Pistache</h3>
+				<audio controls>
+					<source src="Episodes/Radio Pistache.m4a" type="audio/mp3">
+					Votre navigateur ne prend pas en charge l'élément audio.
+				</audio>
+				<p>Description de l'épisode précédent 1</p>
+			</article>
+			<article>
+				<h3>Dodélirium</h3>
+				<audio controls>
+					<source src="Episodes/Dodélirium.m4a" type="audio/mpeg">
+					Votre navigateur ne prend pas en charge l'élément audio.
+				</audio>
+				<p>Description de l'épisode précédent 2</p>
+			</article>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Mon podcast. Tous droits réservés.</p>
+	</footer>
+
+  <form onchange="setStyle(this.value);">
+          <label for="style-selector">Choisir une feuille de style :</label>
+          <select id="style-selector" name="style-selector">
+              <option value="Style CGPT RadioD.css">Style par défaut</option>
+              <option value="Style CGPT RadioD pastel.css">Style pastel</option>
+              <option value="Style CGPT RadioD vives.css">Style vif</option>
+          </select>
+      </form>
+      <script>
+          function setStyle(styleName) {
+              var style = document.getElementById("style");
+              style.setAttribute("href", styleName);
+          }
+      </script>
+
+
+</body>
+</html>
+Votre code semble correct. Cependant, il est possible que le problème soit lié au chemin d'accès de votre fichier CSS. Vérifiez que le nom de votre fichier CSS est correct et qu'il se trouve dans le même dossier que votre fichier HTML. Assurez-vous également que les noms des fichiers dans votre balise "link" correspondent exactement aux noms des fichiers sur votre système.
+
+Si cela ne résout pas le problème, essayez d'ouvrir votre fichier HTML dans différents navigateurs pour voir si cela fonctionne dans l'un d'entre eux. Si cela ne fonctionne pas dans tous les navigateurs, il peut y avoir un problème avec le code JavaScript qui modifie la feuille de style. Dans ce cas, vérifiez que le code JavaScript est correct et qu'il ne contient pas d'erreurs.
+
+
+
+lebas@live.fr
+Je laisse tomber l'idée de sélecteur dans la page. Peux-tu me présenter des feuille de style plus funky ?
+Bien sûr, voici quelques exemples de feuilles de style CSS plus funky pour votre page web de podcast :
+
+Feuille de style "Rétro" :
+
+css
+Copy code
+/* Couleurs */
+:root {
+  --couleur-principale: #E54B4B;
+  --couleur-secondaire: #FF8F00;
+  --couleur-tertiaire: #FFE884;
+  --couleur-texte: #333;
+}
+
+/* Polices */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  font-family: 'Fredoka One', cursive;
+}
+
+/* Mise en page */
+header {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-tertiaire);
+  padding: 20px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: var(--couleur-tertiaire);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--couleur-secondaire);
+}
+
+main {
+  background-color: var(--couleur-tertiaire);
+  color: var(--couleur-texte);
+  padding: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 32px;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+audio {
+  width: 100%;
+  margin: 20px 0;
+}
+
+footer {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-tertiaire);
+  padding: 20px;
+  text-align: center;
+}
+Feuille de style "Disco" :
+
+css
+Copy code
+/* Couleurs */
+:root {
+  --couleur-principale: #FFC107;
+  --couleur-secondaire: #F44336;
+  --couleur-tertiaire: #4CAF50;
+  --couleur-texte: #fff;
+}
+
+/* Polices */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Mise en page */
+header {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-texte);
+  padding: 20px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: var(--couleur-texte);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--couleur-secondaire);
+}
+
+main {
+  background-color: var(--couleur-secondaire);
+  color: var(--couleur-texte);
+  padding: 20px;
+}
+
+h1 {
+  font-size: 64px;
+  margin-bottom: 0;
+  text-shadow: 2px 2px var(--couleur-principale);
+}
+
+h2 {
+  font-size: 48px;
+  margin-top: 0;
+  text-shadow: 2px 2px var(--couleur-principale);
+}
+
+h3 {
+  font-size: 32px;
+  text-shadow: 2px 2px var(--couleur-principale);
+}
+
+audio {
+  width:
+
+
+
+lebas@live.fr
+merci pour tes propositions. Est-ce que tu pourrais me suggérer des codes plus scolaires ?
+
+2 / 2
+
+Bien sûr, voici quelques exemples de codes CSS pour une page web avec une apparence plus scolaire :
+
+Exemple 1 : Couleurs pastel et fond de papier quadrillé :
+
+css
+Copy code
+body {
+  background-image: url('https://i.imgur.com/lS9M1ZS.png');
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 36px;
+  color: #2b2d42;
+  text-align: center;
+  margin-top: 30px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #2b2d42;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 22px;
+  color: #2b2d42;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 16px;
+  color: #4d4d4d;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-top: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #4d4d4d;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #bfc0c0;
+}
+
+section {
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-size: 24px;
+  color: #2b2d42;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+section article {
+  margin-bottom: 20px;
+}
+
+section article h3 {
+  font-size: 20px;
+  color: #4d4d4d;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+audio {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #fcbf49;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffb142;
+}
+Exemple 2 : Couleurs rouge, bleu et blanc avec des bordures épaisses :
+
+css
+Copy code
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 36px;
+  color: #002147;
+  text-align: center;
+  margin-top: 30px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #002147;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 22px;
+  color: #002147;
+  margin-top: 30px;
+}
+
+p
+
+
+
+lebas@live.fr
+tu peux m'envoyer la fin du deuxième code ?
+Bien sûr, voici la fin du deuxième code avec la balise <footer> et la sélection de style via un sélecteur dans la page :
+
+html
+Copy code
+<body>
+	<header>
+		<h1>Radio'D</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Accueil</a></li>
+				<li><a href="#">Episodes</a></li>
+				<li><a href="#">A propos</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2>Dernier épisode</h2>
+			<article>
+				<h3>Téléradio</h3>
+				<audio controls>
+					<source src="Episodes/Téléradio - Collége Daudet.wav" type="audio/wav">
+					Votre navigateur ne prend pas en charge l'élément audio.
+				</audio>
+				<p>Description de l'épisode</p>
+			</article>
+		</section>
+		<section>
+			<h2>Episodes précédents</h2>
+			<article>
+				<h3>Radio Pistache</h3>
+				<audio controls>
+					<source src="Episodes/Radio Pistache.m4a" type="audio/mp3">
+					Votre navigateur ne prend pas en charge l'élément audio.
+				</audio>
+				<p>Description de l'épisode précédent 1</p>
+			</article>
+			<article>
+				<h3>Dodélirium</h3>
+				<audio controls>
+					<source src="Episodes/Dodélirium.m4a" type="audio/mpeg">
+					Votre navigateur ne prend pas en charge l'élément audio.
+				</audio>
+				<p>Description de l'épisode précédent 2</p>
+			</article>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Mon podcast. Tous droits réservés.</p>
+	</footer>
+
+	<form onchange="setStyle(this.value);">
+		<label for="style-selector">
+
+
+
+lebas@live.fr
+peux-tu reprendre ton deuxième exemple de feuille de style scolaire, avec des Couleurs rouge, bleu et blanc avec des bordures épaisses ?
+Voici un exemple de feuille de style scolaire avec les couleurs rouge, bleu et blanc et des bordures épaisses :
+
+css
+Copy code
+/* Feuille de style pour Radio'D - Thème scolaire */
+
+/* Couleurs */
+body {
+  background-color: white;
+  color: black;
+}
+
+header {
+  background-color: red;
+}
+
+nav ul li a {
+  color: white;
+}
+
+main section h2 {
+  color: blue;
+}
+
+main article h3 {
+  color: red;
+}
+
+/* Bordures */
+header {
+  border-bottom: 5px solid white;
+}
+
+nav ul li a {
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+main section {
+  border: 3px solid blue;
+  padding: 10px;
+}
+
+main article {
+  border: 3px solid red;
+  padding: 10px;
+}
+
+audio {
+  border: 2px solid blue;
+  border-radius: 5px;
+}
+
+/* Autres */
+h1, h2, h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer {
+  background-color: blue;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Média queries */
+@media screen and (max-width: 768px) {
+  header {
+    font-size: 1.5em;
+  }
+}

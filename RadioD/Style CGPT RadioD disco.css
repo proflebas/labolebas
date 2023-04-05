@@ -1,0 +1,67 @@
+/* Couleurs */
+:root {
+  --couleur-principale: #FFC107;
+  --couleur-secondaire: #F44336;
+  --couleur-tertiaire: #4CAF50;
+  --couleur-texte: #fff;
+}
+
+/* Polices */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Mise en page */
+header {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-texte);
+  padding: 20px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: var(--couleur-texte);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--couleur-secondaire);
+}
+
+main {
+  background-color: var(--couleur-secondaire);
+  color: var(--couleur-texte);
+  padding: 20px;
+}
+
+h1 {
+  font-size: 64px;
+  margin-bottom: 0;
+  text-shadow: 2px 2px var(--couleur-principale);
+}
+
+h2 {
+  font-size: 48px;
+  margin-top: 0;
+  text-shadow: 2px 2px var(--couleur-principale);
+}
+
+h3 {
+  font-size: 32px;
+  text-shadow: 2px 2px var(--couleur-principale);
+}
+
+audio {
+  width:
