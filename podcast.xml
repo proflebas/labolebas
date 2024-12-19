@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Secret Radio'D</title>
+    <link>https://labolebas.com</link>
+    <description>Les émissions secrètes de Radio'D</description>
+    <language>fr-fr</language>
+    <itunes:author>Radio'D</itunes:author>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:image href="Illustration.jpg" />
+    <item>
+      <title>Épisode 1</title>
+      <description>Résumé ou description de l'épisode 1.</description>
+      <enclosure url="https://votresite.com/audio/episode1.mp3" length="12345678" type="audio/mpeg"/>
+      <guid>https://votresite.com/audio/episode1.mp3</guid>
+      <pubDate>Mon, 18 Dec 2023 12:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Épisode 2</title>
+      <description>Résumé ou description de l'épisode 2.</description>
+      <enclosure url="https://votresite.com/audio/episode2.mp3" length="12345678" type="audio/mpeg"/>
+      <guid>https://votresite.com/audio/episode2.mp3</guid>
+      <pubDate>Tue, 19 Dec 2023 12:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
