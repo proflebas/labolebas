@@ -1,26 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Secret Radio'D</title>
+    <title>labolebas Podcast</title>
     <link>https://labolebas.com</link>
-    <description>Les émissions secrètes de Radio'D</description>
+    <description>Un podcast éducatif et créatif réalisé par des collégiens avec labolebas.</description>
     <language>fr-fr</language>
+    <copyright>© 2025 labolebas. Tous droits réservés.</copyright>
     <itunes:author>Radio'D</itunes:author>
+    <itunes:summary>Des histoires captivantes et éducatives racontées par des élèves de collège.</itunes:summary>
+    <itunes:owner>
+      <itunes:name>Radio'D</itunes:name>
+      <itunes:email>contact@labolebas.com</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://labolebas.com/images/couverture-podcast.jpg"/>
+    <itunes:category text="Education">
+      <itunes:category text="Kids & Family">
+        <itunes:category text="Stories for Kids"/>
+      </itunes:category>
+    </itunes:category>
     <itunes:explicit>no</itunes:explicit>
-    <itunes:image href="Illustration.jpg" />
+    <itunes:type>episodic</itunes:type>
+    <atom:link href="https://labolebas.com/rss/podcast.xml" rel="self" type="application/rss+xml"/>
+
+    <!-- Épisode 1 -->
     <item>
-      <title>Épisode 1</title>
-      <description>Résumé ou description de l'épisode 1.</description>
-      <enclosure url="https://votresite.com/audio/episode1.mp3" length="12345678" type="audio/mpeg"/>
-      <guid>https://votresite.com/audio/episode1.mp3</guid>
-      <pubDate>Mon, 18 Dec 2023 12:00:00 +0000</pubDate>
+      <title>RadioD - Conte de noël 2024</title>
+      <itunes:episode>1</itunes:episode>
+      <itunes:season>2</itunes:season>
+      <itunes:episodeType>full</itunes:episodeType>
+      <description></description>
+      <itunes:summary></itunes:summary>
+      <enclosure url="https://labolebas.com/podcasts/radiod-conte-noel-2024.mp3" type="audio/mpeg" length="12345678"/>
+      <guid>https://labolebas.com/podcasts/radiod-conte-noel-2024.mp3</guid>
+      <pubDate>Mon, 15 Jan 2025 08:00:00 GMT</pubDate>
+      <itunes:duration>00:10:45</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
     </item>
+
+    <!-- Épisode 2 -->
     <item>
-      <title>Épisode 2</title>
-      <description>Résumé ou description de l'épisode 2.</description>
-      <enclosure url="https://votresite.com/audio/episode2.mp3" length="12345678" type="audio/mpeg"/>
-      <guid>https://votresite.com/audio/episode2.mp3</guid>
-      <pubDate>Tue, 19 Dec 2023 12:00:00 +0000</pubDate>
+      <title>Erin - La révolte des stylos</title>
+      <itunes:episode>2</itunes:episode>
+      <itunes:season>2</itunes:season>
+      <itunes:episodeType>full</itunes:episodeType>
+      <description></description>
+      <itunes:summary></itunes:summary>
+      <enclosure url="https://labolebas.com/podcasts/erin-revolte-stylos.mp3" type="audio/mpeg" length="23456789"/>
+      <guid>https://labolebas.com/podcasts/erin-revolte-stylos.mp3</guid>
+      <pubDate>Tue, 16 Jan 2025 08:00:00 GMT</pubDate>
+      <itunes:duration>00:12:00</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
     </item>
+
+    <!-- Épisode 3 -->
+    <item>
+      <title>Maëlys - La bataille des légumes</title>
+      <itunes:episode>3</itunes:episode>
+      <itunes:season>2</itunes:season>
+      <itunes:episodeType>full</itunes:episodeType>
+      <description></description>
+      <itunes:summary></itunes:summary>
+      <enclosure url="https://labolebas.com/podcasts/maelys-bataille-legumes.mp3" type="audio/mpeg" length="34567890"/>
+      <guid>https://labolebas.com/podcasts/maelys-bataille-legumes.mp3</guid>
+      <pubDate>Wed, 17 Jan 2025 08:00:00 GMT</pubDate>
+      <itunes:duration>00:09:30</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+
+    <!-- Épisode 4 -->
+    <item>
+      <title>Ornella - Le pêcheur pressé</title>
+      <itunes:episode>4</itunes:episode>
+      <itunes:season>2</itunes:season>
+      <itunes:episodeType>full</itunes:episodeType>
+      <description></description>
+      <itunes:summary></itunes:summary>
+      <enclosure url="https://labolebas.com/podcasts/ornella-pecheur-presse.mp3" type="audio/mpeg" length="45678901"/>
+      <guid>https://labolebas.com/podcasts/ornella-pecheur-presse.mp3</guid>
+      <pubDate>Thu, 18 Jan 2025 08:00:00 GMT</pubDate>
+      <itunes:duration>00:11:15</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+
+    <!-- Épisode 5 -->
+    <item>
+      <title>Rafaele - Le mystère de la chaussette perdue</title>
+      <itunes:episode>5</itunes:episode>
+      <itunes:season>2</itunes:season>
+      <itunes:episodeType>full</itunes:episodeType>
+      <description></description>
+      <itunes:summary></itunes:summary>
+      <enclosure url="https://labolebas.com/podcasts/rafaele-mystere-chaussette-perdue.mp3" type="audio/mpeg" length="56789012"/>
+      <guid>https://labolebas.com/podcasts/rafaele-mystere-chaussette-perdue.mp3</guid>
+      <pubDate>Fri, 19 Jan 2025 08:00:00 GMT</pubDate>
+      <itunes:duration>00:13:00</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+
   </channel>
 </rss>
