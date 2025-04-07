@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labo Lebas - Mobile</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+            color: #343a40;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            width: 100%;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 26px;
+            font-weight: bold;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            background: #eef2ff;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #2575fc;
+            font-weight: bold;
+        }
+
+        .toggle-dark-mode {
+            margin: 20px;
+            padding: 10px 20px;
+            background: #2575fc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .toggle-dark-mode:hover {
+            background: #6a11cb;
+        }
+
+        .dark-mode {
+            background: #212529;
+            color: white;
+        }
+
+        .dark-mode .card {
+            background: #343a40;
+            color: white;
+        }
+
+        .accordion {
+            background: #2575fc;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            transition: 0.3s;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .accordion:hover {
+            background: #6a11cb;
+        }
+
+        .panel {
+            display: none;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+
+        .sub-card {
+            background: #d6e4ff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .dark-mode .sub-card {
+            background: #495057;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">📚 Labo Lebas - Maths</div>
+
+    <button class="toggle-dark-mode" onclick="toggleDarkMode()">🌙 Mode Sombre</button>
+
+    <div class="container">
+        <button class="accordion">📐 Cours de Géométrie</button>
+        <div class="panel">
+            <div class="card"><a href="Documents/4G1 - Translations.pdf">G1 - Translations</a>
+                <div class="sub-card">📄 <a href="Documents/4G1 - Contrôle de Translations.pdf">Contrôle</a> | ✏️ <a href="Documents/4G1 - Contrôle de Translations corrigé.pdf">Correction</a></div>
+            </div>
+            <div class="card"><a href="Documents/4G2 - Theoreme de Pythagore.pdf">G2 - Théorème de Pythagore</a></div>
+        </div>
+
+        <button class="accordion">➕ Cours de Nombres et Calcul</button>
+        <div class="panel">
+            <div class="card"><a href="Documents/4N2 - Produit de relatifs.pdf">N2 - Produit et quotient de relatifs</a>
+                <div class="sub-card">📄 <a href="Documents/4N2 - Contrôle.pdf">Contrôle</a> | ✏️ <a href="Documents/4N2 - Contrôle corrigé.pdf">Correction</a></div>
+            </div>
+            <div class="card"><a href="Documents/4N3 - Calcul litteral.pdf">N3 - Calcul littéral</a></div>
+        </div>
+
+        <button class="accordion">📊 Cours sur les Données</button>
+        <div class="panel">
+            <div class="card"><a href="Documents/4D2 - Statistiques 1.pdf">D2 - Statistiques 1</a></div>
+            <div class="card"><a href="Documents/4D4 - Statistiques 2.pdf">D4 - Statistiques 2</a></div>
+            <div class="card"><a href="Documents/4D3 - Probabilités.pdf">D3 - Probabilités</a></div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let accordions = document.querySelectorAll('.accordion');
+            accordions.forEach(acc => {
+                acc.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    let panel = this.nextElementSibling;
+                    panel.style.display = (panel.style.display === "block") ? "none" : "block";
+                });
+            });
+        });
+    </script>
+</body>
+</html>
