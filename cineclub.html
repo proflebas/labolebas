@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciné Club – Labo Lebas</title>
+  <link rel="icon" href="../logos/favicon.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #003366, #0055aa);
+      color: white;
+      padding: 2rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      text-decoration: none;
+    }
+    header img.logo {
+      height: 60px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    a.header-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .intro {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+    .film {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+    }
+    .film img {
+      max-width: 100%;
+      border-radius: 8px;
+      height: auto;
+    }
+    .film .date {
+      margin-top: 0.8rem;
+      color: #555;
+      font-size: 0.95rem;
+    }
+    .film a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+      display: block;
+      margin-top: 0.5rem;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="header-link">
+    <header>
+      <img src="../logos/mascotte-labolebas.png" alt="Logo Labo Lebas" class="logo">
+      <h1>Ciné Club</h1>
+    </header>
+  </a>
+
+  <section>
+    <p class="intro">
+      Le ciné club du collège Alphonse Daudet propose aux élèves une sélection de films à découvrir ou redécouvrir ensemble. Les séances ont lieu le lundi après-midi, suivies parfois d’un échange ou d’un débat. Chaque période explore une thématique différente.
+    </p>
+
+    <div class="grid">
+      <div class="film"><img src="images/Affiche La Famille Addams.jpg" alt="La Famille Addams"><div class="date">4 novembre 2024</div><a href="#">La Famille Addams</a></div>
+      <div class="film"><img src="images/Affiche Elephant Man.jpg" alt="Elephant Man"><div class="date">18 novembre 2024</div><a href="#">Elephant Man</a></div>
+      <div class="film"><img src="images/Affiche Icare.jpg" alt="Icare"><div class="date">25 novembre 2024</div><a href="#">Icare</a></div>
+      <div class="film"><img src="images/Affiche La Belle et la Bête.jpg" alt="La Belle et la Bête"><div class="date">9 décembre 2024</div><a href="#">La Belle et la Bête</a></div>
+      <div class="film"><img src="images/Affiche Edward aux mains d’argent.jpg" alt="Edward aux mains d’argent"><div class="date">16 décembre 2024</div><a href="#">Edward aux mains d’argent</a></div>
+      <div class="film"><img src="images/Affiche Retour vers le futur.jpg" alt="Retour vers le futur"><div class="date">6 janvier 2025</div><a href="#">Retour vers le futur</a></div>
+      <div class="film"><img src="images/Affiche Un jour sans fin.jpg" alt="Un jour sans fin"><div class="date">13 et 17 janvier 2025</div><a href="#">Un jour sans fin</a></div>
+      <div class="film"><img src="images/Affiche Retour vers le futur 2.jpg" alt="Retour vers le futur 2"><div class="date">20 janvier 2025</div><a href="#">Retour vers le futur 2</a></div>
+      <div class="film"><img src="images/Affiche La vie est belle.jpg" alt="La vie est belle"><div class="date">27 janvier 2025</div><a href="#">La vie est belle</a></div>
+      <div class="film"><img src="images/Affiche Spiderman.jpg" alt="Spiderman – New generation"><div class="date">24 février 2025</div><a href="#">Spiderman – New generation</a></div>
+      <div class="film"><img src="images/Affiche Captain Fantastic.jpg" alt="Captain Fantastic"><div class="date">3 mars 2025</div><a href="#">Captain Fantastic</a></div>
+      <div class="film"><img src="images/Affiche Little Miss Sunshine.jpg" alt="Little Miss Sunshine"><div class="date">17 mars 2025</div><a href="#">Little Miss Sunshine</a></div>
+      <div class="film"><img src="images/Affiche Juno.jpg" alt="Juno"><div class="date">31 mars 2025</div><a href="#">Juno</a></div>
+      <div class="film"><img src="images/Affiche Baby Driver.jpg" alt="Baby Driver"><div class="date">28 avril 2025</div><a href="#">Baby Driver</a></div>
+      <div class="film"><img src="images/Affiche Mad Max - Fury Road.jpg" alt="Mad Max – Fury Road"><div class="date">5 mai 2025</div><a href="#">Mad Max – Fury Road</a></div>
+      <div class="film"><img src="images/Affiche Fargo.jpg" alt="Fargo"><div class="date">12 mai 2025</div><a href="#">Fargo</a></div>
+      <div class="film"><img src="images/Affiche Le dîner de cons.jpg" alt="Le dîner de cons"><div class="date">26 mai 2025</div><a href="#">Le dîner de cons</a></div>
+      <div class="film"><img src="images/Affiche The Artist.jpg" alt="The Artist"><div class="date">16 juin 2025</div><a href="#">The Artist</a></div>
+      <div class="film"><img src="images/Affiche Romeo + Juliet.jpg" alt="Romeo + Juliet"><div class="date">23 juin 2025</div><a href="#">Romeo + Juliet</a></div>
+      <div class="film"><img src="images/Affiche Grease.jpg" alt="Grease"><div class="date">30 juin 2025</div><a href="#">Grease</a></div>
+    </div>
+  </section>
+
+  <footer>
+    Site réalisé par J. Lebas – Collège Alphonse Daudet d’Istres
+  </footer>
+</body>
+</html>
