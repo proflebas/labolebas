@@ -8,47 +8,59 @@
     <itunes:author>Radio'D</itunes:author>
     <itunes:explicit>no</itunes:explicit>
     <itunes:image href="https://labolebas.com/logo_podcast.jpg"/>
-    <itunes:category text="Education"/>
+    <itunes:category text="Kids &amp; Family">
+      <itunes:category text="Education for Kids"/>
+    </itunes:category>
     <itunes:subtitle>Le podcast du college Daudet</itunes:subtitle>
     <itunes:summary>Des histoires, chroniques et creations sonores realisees par les eleves du college.</itunes:summary>
     <itunes:owner>
       <itunes:name>Radio'D</itunes:name>
-      <itunes:email>proflebas@gmail.com</itunes:email>
+      <itunes:email>contact@labolebas.com</itunes:email>
     </itunes:owner>
     <itunes:type>episodic</itunes:type>
 
     <item>
       <title>Erin - La revolte des stylos</title>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/Erin%20-%20La%20revolte%20des%20stylos.mp3" length="636766" type="audio/mpeg"/>
+      <link>https://labolebas.com/RadioD/Episodes/Erin%20-%20La%20revolte%20des%20stylos.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/Erin%20-%20La%20revolte%20des%20stylos.mp3" length="12345678" type="audio/mpeg"/>
       <guid>https://labolebas.com/RadioD/Episodes/Erin%20-%20La%20revolte%20des%20stylos.mp3</guid>
+      <pubDate>Sat, 12 Apr 2025 08:00:00 +0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
 
     <item>
       <title>Maelys - La bataille des legumes</title>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/Maelys%20-%20La%20bataille%20des%20legumes.mp3" length="432190" type="audio/mpeg"/>
+      <link>https://labolebas.com/RadioD/Episodes/Maelys%20-%20La%20bataille%20des%20legumes.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/Maelys%20-%20La%20bataille%20des%20legumes.mp3" length="23456789" type="audio/mpeg"/>
       <guid>https://labolebas.com/RadioD/Episodes/Maelys%20-%20La%20bataille%20des%20legumes.mp3</guid>
+      <pubDate>Sat, 12 Apr 2025 08:00:00 +0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
 
     <item>
       <title>Ornella - Le pecheur presse</title>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/Ornella%20-%20Le%20pecheur%20presse.mp3" length="322774" type="audio/mpeg"/>
+      <link>https://labolebas.com/RadioD/Episodes/Ornella%20-%20Le%20pecheur%20presse.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/Ornella%20-%20Le%20pecheur%20presse.mp3" length="34567890" type="audio/mpeg"/>
       <guid>https://labolebas.com/RadioD/Episodes/Ornella%20-%20Le%20pecheur%20presse.mp3</guid>
+      <pubDate>Sat, 12 Apr 2025 08:00:00 +0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
 
     <item>
       <title>Conte de noel 2024</title>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/RadioD%20-%2006%20-%20Conte%20de%20noel%202024.mp3" length="2455846" type="audio/mpeg"/>
+      <link>https://labolebas.com/RadioD/Episodes/RadioD%20-%2006%20-%20Conte%20de%20noel%202024.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/RadioD%20-%2006%20-%20Conte%20de%20noel%202024.mp3" length="45678901" type="audio/mpeg"/>
       <guid>https://labolebas.com/RadioD/Episodes/RadioD%20-%2006%20-%20Conte%20de%20noel%202024.mp3</guid>
+      <pubDate>Wed, 25 Dec 2024 08:00:00 +0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
 
     <item>
       <title>Rafaele - Le mystere de la chaussette perdue</title>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/Rafaele%20-%20Le%20mystere%20de%20la%20chaussette%20perdue.mp3" length="439174" type="audio/mpeg"/>
+      <link>https://labolebas.com/RadioD/Episodes/Rafaele%20-%20Le%20mystere%20de%20la%20chaussette%20perdue.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/Rafaele%20-%20Le%20mystere%20de%20la%20chaussette%20perdue.mp3" length="56789012" type="audio/mpeg"/>
       <guid>https://labolebas.com/RadioD/Episodes/Rafaele%20-%20Le%20mystere%20de%20la%20chaussette%20perdue.mp3</guid>
+      <pubDate>Sat, 12 Apr 2025 08:00:00 +0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
   </channel>
