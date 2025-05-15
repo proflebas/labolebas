@@ -1,215 +1,521 @@
 <!DOCTYPE html>
-<html>
-<title>Labo Lebas</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-</style>
-<body class="w3-light-grey">
+<html lang="fr">
+<head>
+  <link rel="icon" href="logos/favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Labo Lebas – Accueil</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #003366, #0055aa);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    header img.logo {
+      height: 60px;
+    }
+    nav {
+      background: #002244;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: #004488;
+    }
+    section {
+      padding: 2rem;
+    }
+    .tile-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 1em;
+      justify-content: center;
+    }
+    .tile {
+      width: 160px;
+      height: 100px;
+      border-radius: 12px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    .tile:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    .tile.labomep { background-color: #3f51b5; }
+    .tile.mathador { background-color: #009688; }
+    .tile.iparcours6e { background-color: #4caf50; }
+    .tile.iparcours4e { background-color: #8bc34a; }
+    .tile.mentales { background-color: #ff9800; }
+    .tile.trio { background-color: #9c27b0; }
+    .tile.mathlive { background-color: #607d8b; }
+    .tile.chronoline { background-color: #795548; }
 
-<!-- w3-content defines a container for fixed size centered content,
-and is wrapped around the whole page content, except for the footer in this example -->
-<div class="w3-content" style="max-width:1400px">
+    .accordion {
+      background: linear-gradient(135deg, #003366, #0055aa);
+      color: white;
+      cursor: pointer;
+      padding: 1rem;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.3s;
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      border-radius: 0.3rem;
+    }
+    .accordion:hover {
+      background-color: #003f7f;
+    }
+    .panel {
+      padding: 0 1rem;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+      border-left: 4px solid #0055aa;
+      margin-bottom: 1rem;
+    }
+    .sub-accordion {
+      background: linear-gradient(135deg, #d8dbf0, #eef0fb);
+      color: #003366;
+      cursor: pointer;
+      padding: 0.8rem;
+      width: 95%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.3s;
+      margin: 0.3rem auto;
+      font-size: 1rem;
+      border-radius: 0.3rem;
+    }
+    .sub-panel {
+      padding: 0.5rem 1rem;
+      display: none;
+      background-color: #f9f9ff;
+      border-left: 3px solid #99bbff;
+      margin-bottom: 0.5rem;
+    }
+    .sub-panel li::before {
+      content: '\1F4D6'; /* icône de livre */
+      margin-right: 0.5em;
+    }
+    .sub-panel li a[href*="Plan"]::before {
+      content: '\270D'; /* icône crayon */
+      margin-right: 0.5em;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logos/mascotte-labolebas.png" alt="Logo Labo Lebas" class="logo">
+    <h1 style="font-size: 2.5rem; margin: 0;">Labo Lebas</h1>
+  </header>
 
-<!-- Header -->
-<header class="w3-container w3-center w3-padding-32" style="background-image:url('bannierelabolebas.jpg');">
+<nav>
+  <a href="#En Classe">En Classe</a>
+  <a href="#6e">6e</a>
+  <a href="#4e">4e</a>
 
-  <a href="index.html">
-    <h1><b>LABO LEBAS</b></h1></a>
-  <p>Où on retrouve les maths que l'on fait au collège  <span class="w3-tag">Alphonse Daudet</span></p>
+  <a href="#bonus">Bonus</a>
 
-</header>
+</nav><section id="prof">
+  <h2>En Classe</h2>
+  <div class="tile-container">
+    <a class="tile labomep" href="https://labomep.sesamath.net" target="_blank">Labomep</a>
+    <a class="tile mathador" href="Mathador.html" target="_blank">Mathador</a>
+    <a class="tile iparcours6e" href="https://www.iparcours.fr/ouvrages/ouvrages.php?ouvrage=Cahier62021" target="_blank">iParcours 6e</a>
+    <a class="tile iparcours4e" href="https://www.iparcours.fr/ouvrages/ouvrages.php?ouvrage=Cahier42022" target="_blank">iParcours 4e</a>
+    <a class="tile mentales" href="https://mathsmentales.net" target="_blank">MathsMentales</a>
+    <a class="tile trio" href="https://www.acamus.net/images/dossier_personnel/jpavageau/trio_math_game_acpoitiers/index.html" target="_blank">Trio</a>
+    <a class="tile mathlive" href="https://go.mathlive.fr" target="_blank">MathLive</a>
+    <a class="tile chronoline" href="https://degrangem.forge.apps.education.fr/ChronoLine" target="_blank">Chronoline</a>
+  </div>
+</section>
 
-<!-- Grid -->
-<div class="w3-row">
-
-<!-- Blog entries -->
-<div class="w3-col l8 s12">
-
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white">
-    <img src="bannierejeux.png" alt="Bannière jeux" style="width:100%">
-    <div class="w3-container">
-      <h3><b>Jeux en classe</b></h3>
-    </div>
-
-    <div class="w3-container">
-      <p>Quelques liens que nous utilisons pendant les cours :
+<section id="6e">
+  <h2>Ressources 6e</h2>
+  <button class="accordion">Nombres et calcul</button>
+  <div class="panel">
+    <button class="sub-accordion">N1 – Nombres entiers et décimaux</button>
+    <div class="sub-panel">
       <ul>
-        <li><a href="Mathador.html" target="_blank">Mathador fait maison</a></li>
-        <li><a href="Mathador Florian.html" target="_blank">La version de Florian du Mathador</a></li>
-        <li><a href="https://www.acamus.net/images/dossier_personnel/jpavageau/trio_math_game_acpoitiers/index.html"target="_blank">Trio, de l'académie de Poitiers</a></li>
-
-        </ul>
-      </p>
-      <p>Des conseils seront donnés dans les pages de chaque classe quant aux meilleurs jeux pour s'entraîner sur telle ou telle leçon</p>
-      <h3><b>Jeux à la maison</b></h3>
-      <p>Ces petits jeux sont créés pour vous aider à réviser des notions particulières </br>
-      Le premier est <a href="Pages Scratch/Opération Simplification.html" target="_blank"> Opération Simplification</a>, un jeu pour vous entraîner à simplifier des fractions.</br>
-      Le second est <a href="Pages Scratch/4emeProportionnelle.html" target="_blank"> Produit en croix </a>, un exerciseur pour vous entraîner à calculer une quatrième proportionnelle
-    </p>
-
-
+        <li><a href="Documents/6N1 - Nombres.pdf">Cours</a></li>
+        <li><a href="Documents/6N1 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
     </div>
-  </div>
-
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white">
-    <img src="iParcours/logo-iParcours-r.png" alt="Logo iParcours" style="width:100%">
-    <div class="w3-container">
-      <h3><b>iParcours</b></h3>
-
-    </div>
-
-    <div class="w3-container">
-      <p>Retrouvez ici les versions pdf de vos manuels iParcours.</p>
-      <table width="100%"> <tr>
-          <th width="50%"> iParcours 6èmes<br>
-              <a href="https://www.iparcours.fr/ouvrages/ouvrages.php?ouvrage=Cahier62021" alt="iParcours/iParcours 6ème.pdf" target="_blank">
-              <img src="iParcours/cahiers6e-2019-200.png" alt="Logo iParcours" style="width:100%"> </a>
-              </th>
-              <th width="50%"> iParcours 4èmes<br>
-                  <a href="https://www.iparcours.fr/ouvrages/ouvrages.php?ouvrage=Cahier42022" alt="iParcours/iParcours 4ème.pdf" target="_blank">
-                  <img src="iParcours/cahiers4e-2019-200.png" alt="Logo iParcours" style="width:100%"> </a>
-                  </th>
-      </tr></table>
-    </div>
-  </div>
-  <hr>
-
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white">
-  <img src="Sesamath_bandeau.png" alt="Logo Sésamath" style="width:100%">
-    <div class="w3-container">
-      <h3><b>Jeux mathématiques</b></h3>
-    </div>
-
-    <div class="w3-container">
-      <p>Voici un florilège des sites internet sur lesquels vous pouvez retrouver des jeux pour réviser en s'amusant :
+    <button class="sub-accordion">N2 – Additions et soustractions</button>
+    <div class="sub-panel">
       <ul>
-        <li><a href="https://mathsmentales.net">Maths Mentales</a></li>
-        <li><a href="https://labomep.sesamath.net">LaboMep</a></li>
-        <li><a href="https://mathenpoche.sesamath.net/index.php">Mathenpoche</a></li>
-        <li><a href="https://www.lumni.fr/jeu/calculator">Calculator</a></li>
-        <li><a href="https://www.jeuxmaths.fr/jeux-de-maths-en-ligne.html">Jeux Maths</a></li>
-        </ul>
-      </p>
-      <p>Des conseils seront donnés dans les pages de chaque classe quant aux meilleurs jeux pour s'entraîner sur telle ou telle leçon</p>
-
+        <li><a href="Documents/6N2 - Additions et soustractions.pdf">Cours</a></li>
+        <li><a href="Documents/6N2 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">N3 – Multiplications</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/6N3 - Multiplications.pdf">Cours</a></li>
+        <li><a href="Documents/6N3 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">N4 – Divisions</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/6N4 - Divisions.pdf">Cours</a></li>
+        <li><a href="Documents/6N4 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">N5 – Fractions</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/6N5 - Fractions.pdf">Cours</a></li>
+        <li><a href="Documents/6N5 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">N6 – Proportionnalité</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/6N6 - Proportionnalité.pdf">Cours</a></li>
+        <li><a href="Documents/6N6 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
     </div>
   </div>
-<!-- END BLOG ENTRIES -->
-</div>
 
-<!-- Introduction menu -->
-<div class="w3-col l4">
-  <!-- About Card -->
-  <div class="w3-card w3-margin w3-margin-top">
-  <img src="photocollege.jpg" style="width:100%">
-    <div class="w3-container w3-white">
-      <h4><b>Des cours de maths au collège Alphonse Daudet d'Istres</b></h4>
-      <p>Sur ce site, vous allez pouvoir retrouver tout ce dont vous avez besoin pour réussir votre année en mathématiques. Cours, livres, accès pronote, jeux...<br>
-      Il ne vous reste plus qu'à découvrir tout ça !<br>
-      J. Lebas</p>
+  <button class="accordion">Géométrie</button>
+  <div class="panel">
+    <button class="sub-accordion">G1 – Droites</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/6G1 - Droites.pdf">Cours</a></li>
+        <li><a href="Documents/6G1 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
     </div>
-  </div><hr>
-
-  <!-- Posts -->
-  <div class="w3-card w3-margin">
-    <div class="w3-container w3-padding">
-      <h4>Espaces élèves</h4>
+    <button class="sub-accordion">G2 – Cercles</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/6G2 - Cercles.pdf">Cours</a></li>
+        <li><a href="Documents/6G2 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
     </div>
-    <ul class="w3-ul w3-hoverable w3-white">
-      <li class="w3-padding-16">
-        <a href="page6.html">
-        <span class="w3-large">Page des 6èmes</span></a><img src="6eme.png" alt="Image" class="w3-left w3-margin-right" style="width:50px"><br>
-        <span>Les cours de 6ème</span>
-      </li>
-
-      <li class="w3-padding-16">
-        <a href="page4.html">
-        <span class="w3-large">Page des 4èmes</span><img src="4eme.png" alt="Image" class="w3-left w3-margin-right" style="width:50px"></a><br>
-        <span>Les cours de 4ème</span>
-      </li>
-      <li class="w3-padding-16">
-        <a href="parents.html">
-        <span class="w3-large">Page des parents</span></a><br>
-        <span>Les cours de M. Lebas</span>
-      </li>
-	<li class="w3-padding-16">
-		<span class="w3-large">
-		<a href="Web/atelier web.html">Atelier Web</span></a><br>
-		<span>Cinéma et web</span>
-		</li>
-
-    <li class="w3-padding-16">
-      <span class="w3-large">
-      <a href="Web/vacances apprenantes.html">Vacances apprenantes</span></a><br>
-      <span>Cinéma et web</span>
-    </li>
-
-    <li class="w3-padding-16">
-        <a href="https://0132409y.index-education.net/pronote/eleve.html">
-        <img src="logopronote.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Pronote</span></a><br>
-        <span>Un raccourci vers Pronote</span>
-    </li>
-    <li class="w3-padding-16">
-        <a href="http://www.clg-daudet-istres.ac-aix-marseille.fr/spip/">
-        <img src="logocollege.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Site du collège</span></a><br>
-        <span>Le site du collège, dans lequel vous retrouvez toutes les actualités</span>
-    </li>
-
-    </ul>
+    <button class="sub-accordion">G3 – Triangles</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/6G3 - Triangles.pdf">Cours</a></li>
+        <li><a href="Documents/6G3 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">G4 – Symétrie</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/6G4 - Symétrie.pdf">Cours</a></li>
+        <li><a href="Documents/6G4 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">G5 – Quadrilatères</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/6G5 - Quadrilatères.pdf">Cours</a></li>
+        <li><a href="Documents/6G5 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">G6 – Solides</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/6G6 - Solides.pdf">Cours</a></li>
+        <li><a href="Documents/6G6 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
+    </div>
   </div>
-  <hr>
 
-  <div class="w3-card w3-margin">
-    <div class="w3-container w3-padding">
-      <h4>Outils pour la classe</h4>
+  <button class="accordion">Mesures</button>
+  <div class="panel">
+    <button class="sub-accordion">M1 – Longueurs et mesures</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/6M1 - Longueurs et mesures.pdf">Cours</a></li>
+        <li><a href="Documents/6M1 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
     </div>
-    <ul class="w3-ul w3-hoverable w3-white">
-      <li class="w3-padding-16">
-        <span class="w3-large">
-                  <a href="Mathador.html">Mathador</span></a><br>
-        <span>Exemple de mathador</span>
-      </li>
+    <button class="sub-accordion">M2 – Angles</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/6M2 - Angles.pdf">Cours</a></li>
+        <li><a href="Documents/6M2 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">M3 – Durées</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/6M3 - Durées.pdf">Cours</a></li>
+        <li><a href="Documents/6M3 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">M4 – Aires</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/6M4 - Aires.pdf">Cours</a></li>
+        <li><a href="Documents/6M4 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">M5 – Volumes</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/6M5 - Volumes.pdf">Cours</a></li>
+        <li><a href="Documents/6M5 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-      <li class="w3-padding-16">
-        <span class="w3-large">
-                  <a href="https://degrangem.forge.apps.education.fr/ChronoLine">Chronoline</span></a><br>
-        <span>De Mathieu Degrange</span>
-      </li>
+<section id="4e">
+  <h2>Ressources 4e</h2>
+  <button class="accordion">Nombres et calculs</button>
+  <div class="panel">
+    <button class="sub-accordion">N1 – Addition et soustraction de relatifs</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4N1 - Somme de relatifs.pdf">Cours</a></li>
+        <li><a href="Documents/4N1 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4N1 - Controle.PNG">Contrôle</a></li>
+        <li><a href="Documents/4N1 - Controle Correction.PNG">Correction</a></li>
+        <li><a href="Documents/4N1 - Amélioration.PNG">Contrôle</a></li>
+        <li><a href="Documents/4N1 - Amélioration Correction.PNG">Correction</a></li>
+        <li><a href="Documents/4N1 - Approfondissement.PNG">Contrôle</a></li>
+        <li><a href="Documents/4N1 - Approfondissement Correction.PNG">Correction</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">N2 – Produit et quotient de relatifs</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4N2 - Produit de relatifs.pdf">Cours</a></li>
+        <li><a href="Documents/4N2 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4N2 - Contrôle.pdf">Contrôle</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">N3 – Calcul littéral</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4N3 - Calcul littéral.pdf">Cours</a></li>
+        <li><a href="Documents/4N3 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4N3 - Contrôle.pdf">Contrôle</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">N4 – Sommes de fractions</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4N4 - Sommes de fractions.pdf">Cours</a></li>
+        <li><a href="Documents/4N4 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4N4 - Contrôle.pdf">Contrôle</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">N5 – Produit de fractions</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4N5 - Produits de fractions.pdf">Cours</a></li>
+        <li><a href="Documents/4N5 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4N5 - Contrôle.pdf">Contrôle</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">N6 – Développement et factorisation</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4N6 - Développement et factorisation.pdf">Cours</a></li>
+        <li><a href="Documents/4N6 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4N6 - Contrôle.pdf">Contrôle</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">N7 – Inverse</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4N7 - Inverse.pdf">Cours</a></li>
+        <li><a href="Documents/4N7 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">N8 – Équations</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4N8 - Equations.pdf">Cours</a></li>
+        <li><a href="Documents/4N8 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">N9 – Puissances</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4N9 - Puissances.pdf">Cours</a></li>
+        <li><a href="Documents/4N9 - Plan de travail.pdf">Plan de travail</a></li>
+      </ul>
+    </div>
+  </div>
 
-      <li class="w3-padding-16">
-        <span class="w3-large">
-                  <a href="https://labomep.sesamath.net">Labomep</span></a>
-        <span></span>
-      </li>
+  <button class="accordion">Données</button>
+  <div class="panel">
+    <button class="sub-accordion">D1 – Proportionnalité</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4D1 - Proportionnalite.pdf">Cours</a></li>
+        <li><a href="Documents/4D1 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4D1 - Contrôle.pdf">Contrôle</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">D2 – Statistiques 1</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4D2 - Statistiques 1.pdf">Cours</a></li>
+        <li><a href="Documents/4D2 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4D2 - Contrôle.pdf">Contrôle</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">D3 – Probabilités</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4D3 - Probabilités.pdf">Cours</a></li>
+        <li><a href="Documents/4D3 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4D3 - Contrôle.pdf">Contrôle</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">D4 – Statistiques 2</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4D4 - Statistiques 2.pdf">Cours</a></li>
+        <li><a href="Documents/4D4 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4D4 - Contrôle.pdf">Contrôle</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">D5 – Grandeurs composées</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4D5 - Grandeurs composées.pdf">Cours</a></li>
+        <li><a href="Documents/4D5 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4D5 - Contrôle.pdf">Contrôle</a></li>
+      </ul>
+    </div>
+  </div>
 
-    </ul>
+  <button class="accordion">Géométrie</button>
+  <div class="panel">
+    <button class="sub-accordion">G1 – Repères et translations</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4G1 - Translations.pdf">Cours</a></li>
+        <li><a href="Documents/4G1 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4G1 - Contrôle de Translations.pdf">Contrôle</a></li>
+        <li><a href="Documents/4G1 - Contrôle de Translations corrigé.pdf">Correction</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">G2 – Théorème de Pythagore</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4G2 - Theoreme de Pythagore.pdf">Cours</a></li>
+        <li><a href="Documents/4G2 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4G2 - Contrôle.pdf">Contrôle</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">G3 – Triangles égaux</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4G3 - Triangles egaux.pdf">Cours</a></li>
+        <li><a href="Documents/4G3 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4G3 - Contrôle.pdf">Contrôle</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">G4 – Pyramides et cônes</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4G4 - Pyramides et cones de révolution.pdf">Cours</a></li>
+        <li><a href="Documents/4G4 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4G4 - Contrôle.pdf">Contrôle</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">G5 – Réciproque de Pythagore</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4G5 - Reciproque du theoreme de Pythagore.pdf">Cours</a></li>
+        <li><a href="Documents/4G5 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4G5 - Contrôle.pdf">Contrôle</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">G6 – Rotations</button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="Documents/4G6 - Rotations.pdf">Cours</a></li>
+        <li><a href="Documents/4G6 - Plan de travail.pdf">Plan de travail</a></li>
+        <li><a href="Documents/4G6 - Contrôle.pdf">Contrôle</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 
-<!-- END Introduction Menu -->
-</div>
 
-<!-- END GRID -->
-</div><br>
+<section id="bonus">
+  <h2>Bonus : Jeux et Projets</h2>
+  <div class="tile-container">
+    <a class="tile" href="jeux.html" style="background-color: #8e44ad; color: white;">Jeux interactifs</a>
+    <a class="tile" href="Web/atelier web.html" style="background-color: #2980b9; color: white;">Atelier Web</a>
+    <a class="tile" href="Web/cineclub.html" style="background-color: #c0392b; color: white;">Ciné Club</a>
+    <a class="tile" href="Web/classemedias.html" style="background-color: #27ae60; color: white;">Classe Médias</a>
+    <a class="tile" href="Web/vacances apprenantes.html" style="background-color: #f39c12; color: white;">Vacances apprenantes</a>
+    <a class="tile" href="parents.html" style="background-color: #607d8b; color: white;">Espace Parents</a>
+    <a class="tile" href="https://deezer.com/show/1001880511" target="_blank" style="background-color: #1db954; color: white;">Radio'D</a>
+  </div>
+</section>
 
-<!-- END w3-content -->
-</div>
-<!-- Lien vers la version alternative -->
-<div class="w3-container w3-padding w3-small w3-center w3-light-grey w3-border-top">
-  <p>🔧 En test : <a href="index_alternatif.html" class="w3-text-blue">nouvelle version du site</a> – Vos retours sont les bienvenus !</p>
-</div>
-<!-- Footer -->
-<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-  Site rédigé par J. Lebas pour le collège Alphonse Daudet d'Istres
+<footer>
+  Site réalisé par J. Lebas – Collège Alphonse Daudet d’Istres
 </footer>
+
+<script>
+  const acc = document.getElementsByClassName("accordion");
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.display = (panel.style.display === "block") ? "none" : "block";
+    });
+  }
+
+  const subAcc = document.getElementsByClassName("sub-accordion");
+  for (let i = 0; i < subAcc.length; i++) {
+    subAcc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.display = (panel.style.display === "block") ? "none" : "block";
+    });
+  }
+</script>
 
 </body>
 </html>

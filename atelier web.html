@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Web – Labo Lebas</title>
+  <link rel="icon" href="../logos/favicon.png" type="image/png">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #003366, #0055aa);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header img.logo {
+      height: 60px;
+    }
+    section {
+      padding: 2rem;
+    }
+    .tile-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 1em;
+      justify-content: center;
+    }
+    .tile {
+      width: 220px;
+      height: 100px;
+      border-radius: 12px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      padding: 0.5rem;
+    }
+    .tile:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    .tile.download { background-color: #3498db; }
+    .student1 { background-color: #8e44ad; }
+    .student2 { background-color: #c0392b; }
+    .student3 { background-color: #16a085; }
+    .student4 { background-color: #f39c12; }
+    .student5 { background-color: #2c3e50; }
+    .student6 { background-color: #2980b9; }
+
+    .subtitle {
+      font-size: 0.9rem;
+      font-weight: normal;
+      margin-top: 0.3rem;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Atelier Web</h1>
+    <p>Découvre comment créer ton propre site en HTML !</p>
+  </header>
+
+  <section>
+    <h2>Présentation</h2>
+    <p>Le but de cet atelier, ouvert à tous, est d'apprendre les bases du langage HTML.<br>
+    Grâce à lui, les élèves pourront créer leur propre site. Les meilleurs seront publiés ici.</p>
+    <p>Nous utilisons les deux fichiers suivants :</p>
+    <div class="tile-container">
+      <a class="tile download" href="Top cinema.html">HTML de base</a>
+      <a class="tile download" href="Style d'Alphonse.css">CSS associé</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sites des élèves – Année 2021-2022</h2>
+    <p>Voici les créations des élèves ayant participé à l'atelier :</p>
+    <div class="tile-container">
+      <a class="tile student1" href="Mod Minecraft Noah/Accueil.html" target="_blank">
+        Mods Minecraft<br><span class="subtitle">par Noah</span>
+      </a>
+      <a class="tile student2" href="Site Eamanime/Eamanime.html" target="_blank">
+        Eamanime<br><span class="subtitle">par Mae</span>
+      </a>
+      <a class="tile student3" href="Site ethan/Top cinema.html" target="_blank">
+        Five Nights at Freddy's<br><span class="subtitle">par Ethan</span>
+      </a>
+      <a class="tile student4" href="site potions Ju/Top cinema.html" target="_blank">
+        Potions de sorcier<br><span class="subtitle">par Juliette</span>
+      </a>
+      <a class="tile student5" href="site web leo/Accueil.html" target="_blank">
+        Rolce Animeo<br><span class="subtitle">par Léo</span>
+      </a>
+      <a class="tile student6" href="site.lina b/Top cinema.html" target="_blank">
+        My Hero Academia<br><span class="subtitle">par Lina</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    Page réalisée par J. Lebas – Collège Alphonse Daudet d’Istres
+  </footer>
+</body>
+</html>
