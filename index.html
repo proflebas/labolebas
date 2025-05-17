@@ -123,13 +123,26 @@
       margin-bottom: 0.5rem;
     }
     .sub-panel li::before {
-      content: '\1F4D6'; /* icône de livre */
+      content: '';
       margin-right: 0.5em;
     }
+
+    .sub-panel li a[href*="Cours"]::before {
+      content: '📘';
+      margin-right: 0.5em;
+    }
+
     .sub-panel li a[href*="Plan"]::before {
-      content: '\270D'; /* icône crayon */
+      content: '✍️';
       margin-right: 0.5em;
     }
+
+    .sub-panel li a[href*="Contrôle"]::before {
+      content: '📝';
+      margin-right: 0.5em;
+    }
+
+
     footer {
       background: #003366;
       color: white;
