@@ -1,58 +1,97 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
-	<title> Top d'Alphonse  </title>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="Style d'Alphonse.css" type="text/css" />
+    <title>Top d'Alphonse</title>
+    <meta charset="utf-8" />
+    <style>
+        body, div {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: DarkGreen;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        img {
+            float: left;
+            margin-right: 20px;
+        }
+        th { width: 200px; }
+        ul { list-style-type: square; }
+
+        #entete-de-page {
+            padding: 5px;
+            height: 100px;
+            background-color: azure;
+            font-size: 32px;
+            font-weight: bold;
+            font-variant: small-caps;
+            text-align: center;
+        }
+        #bloc-menu {
+            height: 36px;
+            background-color: steelblue;
+            color: white;
+        }
+        #contenu {
+            padding: 10px;
+            background-color: navajoWhite;
+        }
+
+        #pied-de-page {
+            padding: 5px;
+            background-color: lightgreen;
+            font-size: 11px;
+        }
+    </style>
 </head>
 
 <body>
-	<div id="entete-de-page">
-		<p> Les tops d'Alphonse  <br/>
-		Mon univers </p>
-	</div>
+    <div id="entete-de-page">
+        <p>Les tops d'Alphonse<br/>
+        Mon univers</p>
+    </div>
 
-	<table id="bloc-menu" border="1">
+    <table id="bloc-menu" border="1" width="100%">
+        <tr>
+            <th>Accueil</th>
+            <th>Films</th>
+            <th>Musique</th>
+            <th>Théâtre</th>
+            <th>Sport</th>
+            <th>Humour</th>
+            <th>Livres</th>
+        </tr>
+    </table> <br/>
 
-	<tr>
-		<th> Accueil </th>
-		<th> Films </th>
-		<th> Musique </th>
-		<th> Théâtre </th>
-		<th> Sport </th>
-		<th> Humour </th>
-		<th> Livres </th>
-	</tr>
+    <div id="contenu">
+        <h1>Accueil</h1>
+        Sur ce site, vous retrouverez mes films, livres, musiques... préférés</br>
 
-	</table> <br/>
+        </br>
+        <h2>Top cinéma</h2>
+        <p><br/>
+            Mes films de super-héros préférés :
+        </p>
+        <ol>
+            <li>Avengers Infinity War</li>
+            <li>Avengers Endgame</li>
+            <li>The Dark Knight</li>
+            <li>Incassable</li>
+            <li>Kick Ass</li>
+            <li>Ant-Man</li>
+            <li>Dr Strange</li>
+            <li>Batman Begins</li>
+            <li>Spiderman Far from home</li>
+            <li>Les gardiens de la galaxie</li>
+        </ol>
+    </div>
 
-	<div id="contenu">
-		<h1> Accueil </h1>
-			Sur ce site, vous retrouverez mes films, livres, musiques... préférés</br>
-
-</br>
-		<h2> Top cinéma</h2>
-		<p> <br/>
-			Mes films de super-héros préférés :
-		<ol>
-			<li>Avengers Infinity War</li>
-			<li>Avengers Endgame</li>
-			<li>The Dark Knight</li>
-			<li>Incassable</li>
-			<li>Kick Ass</li>
-			<li>Ant-Man</li>
-			<li>Dr Strange</li>
-			<li>Batman Begins</li>
-			<li>Spiderman Far from home</li>
-			<li>Les gardiens de la galaxie</li>
-		</ol>
-
-	<div id="pied-de-page">
-		<p> Atelier Web - Dernière mise à jour : 3 octobre 2022 <br/>
-		Les textes et images utilisés n'engagent que son auteur : Alphonse Daudet </p>
-	</div> <br/>
-
+    <div id="pied-de-page">
+        <p>Atelier Web - Dernière mise à jour : 3 octobre 2022<br/>
+        Les textes et images utilisés n'engagent que son auteur : Alphonse Daudet</p>
+    </div> <br/>
 </body>
-
 </html>
