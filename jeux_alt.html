@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeux de maths</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #003366, #0055aa);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .filter-buttons button {
+      background-color: #0055aa;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.3rem;
+      cursor: pointer;
+    }
+    .filter-buttons button.active {
+      background-color: #003f7f;
+    }
+    .tile-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .tile {
+      width: 200px;
+      height: 100px;
+      border-radius: 12px;
+      
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    .tile:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+      .tile-6e { background-color: #4caf50; }
+    .tile-4e { background-color: #9c27b0; }
+    .tile-0  { background-color: #e57373; }
+    .tile-1  { background-color: #f06292; }
+    .tile-2  { background-color: #ba68c8; }
+    .tile-3  { background-color: #9575cd; }
+    .tile-4  { background-color: #7986cb; }
+    .tile-5  { background-color: #64b5f6; }
+    .tile-6  { background-color: #4dd0e1; }
+    .tile-7  { background-color: #4db6ac; }
+    .tile-8  { background-color: #81c784; }
+    .tile-9  { background-color: #dce775; }
+    .tile-10 { background-color: #fff176; }
+    .tile-11 { background-color: #ffd54f; }
+    .tile-12 { background-color: #ffb74d; }
+    .tile-13 { background-color: #ff8a65; }
+    .tile-14 { background-color: #a1887f; }
+    .tile-15 { background-color: #90a4ae; }
+</style>
+</head>
+
+
+
+
+<div id="conteneur-jeu-boyard" style="display:none; text-align:center; padding:2rem;">
+  <button onclick="fermerJeuBoyard()" style="margin-bottom:1rem;">Fermer le jeu</button>
+  <div id="openfl-content"></div>
+</div>
+
+<script src="jeux/lime.min.js"></script>
+<script src="jeux/MathBoyard.js"></script>
+<script>
+  function lancerJeuBoyard(e) {
+    e.preventDefault();
+    document.getElementById("conteneur-jeu-boyard").style.display = "block";
+    if (!document.getElementById("openfl-content").hasChildNodes()) {
+      lime.embed("MathBoyard", "openfl-content", 800, 600, { parameters: {} });
+    }
+    window.scrollTo({ top: document.getElementById("conteneur-jeu-boyard").offsetTop, behavior: 'smooth' });
+  }
+  function fermerJeuBoyard() {
+    document.getElementById("conteneur-jeu-boyard").style.display = "none";
+    document.getElementById("openfl-content").innerHTML = "";
+  }
+</script>
+
+<body>
+  <header>
+    <h1>Jeux de maths</h1>
+  </header>
+
+  <div class="filter-buttons">
+    <button onclick="filterTiles('all')" class="active">Tous</button>
+    <button onclick="filterTiles('6e')">6e</button>
+    <button onclick="filterTiles('4e')">4e</button>
+  </div>
+
+  <div class="tile-container">
+<a class="tile tile-0" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-balance-ton-equation.html" target="_blank">Balance ton équation</a>
+<a class="tile tile-1" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-billard.html" target="_blank">Billard - équations</a>
+<a class="tile tile-2" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-bombardier.html" target="_blank">Bombardier</a>
+<a class="tile tile-3" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-bombermaths.html" target="_blank">Bombermaths</a>
+<a class="tile tile-4" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-chambre3.html" target="_blank">Chambre aux équations 3</a>
+<a class="tile tile-5" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-castlemathia.html" target="_blank">Castlemathia</a>
+<a class="tile tile-6" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-calculogic.html" target="_blank">Calculogic</a>
+<a class="tile tile-7" data-niveau="4e" href="#" onclick="lancerJeuBoyard(event)">Maths Boyard</a>
+<a class="tile tile-8" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-mathtothefuture.html" target="_blank">Math to the future</a>
+<a class="tile tile-9" data-niveau="4e" href="https://www.jeuxmaths.fr/pingouin.html" target="_blank">Pingouin</a>
+<a class="tile tile-10" data-niveau="4e" href="https://www.jeuxmaths.fr/viser_juste.html" target="_blank">Viser juste</a>
+<a class="tile tile-11" data-niveau="4e" href="https://www.jeuxmaths.fr/boutons.html" target="_blank">Boutons</a>
+<a class="tile tile-12" data-niveau="4e" href="https://www.jeuxmaths.fr/maths_invaders.html" target="_blank">Maths Invaders</a>
+<a class="tile tile-13" data-niveau="4e" href="https://www.jeuxmaths.fr/spidermath.html" target="_blank">SpiderMath</a>
+<a class="tile tile-14" data-niveau="4e" href="https://www.jeuxmaths.fr/plateforme.html" target="_blank">Plateforme</a>
+<a class="tile tile-15" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-codes.html" target="_blank">Codes</a>
+<a class="tile tile-0" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-defense.html" target="_blank">Defense</a>
+<a class="tile tile-1" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-egaux.html" target="_blank">Egaux</a>
+<a class="tile tile-2" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-galaxie.html" target="_blank">Galaxie</a>
+<a class="tile tile-3" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-halte-aux-erreurs.html" target="_blank">Halte aux erreurs</a>
+<a class="tile tile-4" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-intercept.html" target="_blank">Intercept</a>
+<a class="tile tile-5" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-le-juste-resultat.html" target="_blank">Le juste résultat</a>
+<a class="tile tile-6" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-les-intrus.html" target="_blank">Les intrus</a>
+<a class="tile tile-7" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-mot-interdit.html" target="_blank">Mot interdit</a>
+<a class="tile tile-8" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-numero.html" target="_blank">Numéro</a>
+<a class="tile tile-9" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-ou-est-la-balle.html" target="_blank">Où est la balle</a>
+<a class="tile tile-10" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-pirates.html" target="_blank">Pirates</a>
+<a class="tile tile-11" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-priorites.html" target="_blank">Priorités</a>
+<a class="tile tile-12" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-reflex.html" target="_blank">Réflex</a>
+<a class="tile tile-13" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-serpents.html" target="_blank">Serpents</a>
+<a class="tile tile-14" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-spationaute.html" target="_blank">Spationaute</a>
+<a class="tile tile-15" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-topchrono.html" target="_blank">Top Chrono</a>
+<a class="tile tile-0" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-triangle-mystere.html" target="_blank">Triangle mystère</a>
+<a class="tile tile-1" data-niveau="4e" href="https://www.jeuxmaths.fr/jeu-de-math-vaisseau.html" target="_blank">Vaisseau</a>
+<a class="tile tile-2" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-attaque.html" target="_blank">Attaque</a>
+<a class="tile tile-3" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-base5.html" target="_blank">Base 5</a>
+<a class="tile tile-4" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-canon.html" target="_blank">Canon</a>
+<a class="tile tile-5" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-cible.html" target="_blank">Cible</a>
+<a class="tile tile-6" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-defense-des-bases.html" target="_blank">Défense des bases</a>
+<a class="tile tile-7" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-frise.html" target="_blank">Frise</a>
+<a class="tile tile-8" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-galaxie-nombres.html" target="_blank">Galaxie des nombres</a>
+<a class="tile tile-9" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-glisse.html" target="_blank">Glisse</a>
+<a class="tile tile-10" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-hexacolor.html" target="_blank">Hexacolor</a>
+<a class="tile tile-11" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-ilot.html" target="_blank">Îlot</a>
+<a class="tile tile-12" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-juste-cible.html" target="_blank">Juste Cible</a>
+<a class="tile tile-13" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-ko.html" target="_blank">KO</a>
+<a class="tile tile-14" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-labyrinthe.html" target="_blank">Labyrinthe</a>
+<a class="tile tile-15" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-magicien.html" target="_blank">Magicien</a>
+<a class="tile tile-0" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-nombres-volants.html" target="_blank">Nombres volants</a>
+<a class="tile tile-1" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-obstacles.html" target="_blank">Obstacles</a>
+<a class="tile tile-2" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-pyramide.html" target="_blank">Pyramide</a>
+<a class="tile tile-3" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-question-pour-un-champion.html" target="_blank">Question pour un champion</a>
+<a class="tile tile-4" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-robo.html" target="_blank">Robo</a>
+<a class="tile tile-5" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-supermaths.html" target="_blank">Supermaths</a>
+<a class="tile tile-6" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-trap.html" target="_blank">Piège</a>
+<a class="tile tile-7" data-niveau="6e" href="https://www.jeuxmaths.fr/jeu-de-math-univers.html" target="_blank">Univers</a>
+</div>
+
+  <footer>
+    <p>Site réalisé par J. Lebas – Collège Alphonse Daudet d’Istres</p>
+  </footer>
+
+  <script>
+    function filterTiles(niveau) {
+      const tiles = document.querySelectorAll('.tile');
+      const buttons = document.querySelectorAll('.filter-buttons button');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      tiles.forEach(tile => {
+        if (niveau === 'all' || tile.dataset.niveau === niveau) {
+          tile.style.display = 'flex';
+        } else {
+          tile.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
