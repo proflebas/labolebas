@@ -1,191 +1,253 @@
 <!DOCTYPE html>
-<html>
-<title>Labo Lebas - 4ème</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-</style>
-<body class="w3-light-grey">
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parents – Labo Lebas</title>
+  <link rel="icon" href="logos/favicon.png" type="image/png">
+  <style>
+    :root{
+      --bg:#f4f4f9; --text:#333;
+      --header-a:#003366; --header-b:#0055aa;
+      --card:#fff; --shadow:0 4px 10px rgba(0,0,0,.1); --r:12px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:sans-serif;background:var(--bg);color:var(--text)}
 
-<!-- w3-content defines a container for fixed size centered content,
-and is wrapped around the whole page content, except for the footer in this example -->
-<div class="w3-content" style="max-width:1400px">
+    /* Header (identique esprit index) */
+    a.header-link{display:block;color:inherit;text-decoration:none}
+    header{
+      background:linear-gradient(135deg,var(--header-a),var(--header-b));
+      color:#fff; padding:2rem 1rem;
+      display:flex; gap:1rem; align-items:center; justify-content:center; text-align:center;
+    }
+    header img.logo{height:60px}
+    header h1{margin:0;font-size:2.5rem}
 
-<!-- Header -->
-<header class="w3-container w3-center w3-padding-32" style="background-image:url('bannierelabolebas.jpg');">
+    main{max-width:1100px;margin:0 auto;padding:2rem 1rem}
 
-  <a href="index.html">
-    <h1><b>LABO LEBAS</b></h1></a>
-  <p>Où on retrouve les maths que l'on fait au collège  <span class="w3-tag">Alphonse Daudet</span></p>
+    /* Accordéons principaux (gros) */
+    .accordion{
+      color:#fff; cursor:pointer; padding:1rem; width:100%; text-align:left;
+      border:none; outline:none; transition:.3s; margin:.6rem 0; font-size:1.1rem; border-radius:.4rem;
+      box-shadow:var(--shadow);
+    }
+    .accordion:hover{filter:brightness(1.05)}
+    /* Couleurs = couleurs des tuiles */
+    .acc-cpt     { background:linear-gradient(135deg,#8e24aa,#ab47bc);} /* violet */
+    .acc-plan    { background:linear-gradient(135deg,#fb8c00,#fbc02d);} /* orange doré */
+    .acc-eval    { background:linear-gradient(135deg,#3f51b5,#5c6bc0);} /* indigo */
+    .acc-mat     { background:linear-gradient(135deg,#43a047,#81c784);} /* vert */
+    .acc-note    { background:linear-gradient(135deg,#e53935,#ef5350);} /* rouge doux */
+    .acc-devoir  { background:linear-gradient(135deg,#1976d2,#64b5f6);} /* bleu clair */
+    .acc-labomep { background:linear-gradient(135deg,#009688,#26a69a);} /* vert turquoise */
+    .acc-salle   { background:linear-gradient(135deg,#6d4c41,#8d6e63);} /* brun/gris */
 
-</header>
+    .panel{
+      display:none; background:#fff; border-left:4px solid #ccc; padding:1rem 1.25rem; border-radius:.4rem;
+      box-shadow:var(--shadow);
+    }
+    .panel p, .panel ul{line-height:1.6}
+    .panel a.top{
+      display:inline-block; margin-top:.5rem; font-size:.95rem; text-decoration:none; color:#0055aa;
+    }
 
-<!-- Grid -->
-<div class="w3-row">
+    footer{
+      background:#003366; color:#fff; text-align:center; padding:1rem; margin-top:3rem;
+    }
+  </style>
+</head>
+<body>
 
-<!-- Blog entries -->
-<div class="w3-col l8 s12">
-  <!-- Blog entry -->
+  <a href="index.html" class="header-link">
+    <header>
+      <img src="logos/mascotte-labolebas.png" alt="Logo Labo Lebas" class="logo">
+      <h1>Page des parents</h1>
+    </header>
+  </a>
 
+  <main>
+<p>
+Chers parents d'élèves,</p>
+<p>vous retrouverez sur cette page des explications quant à ma façon de fonctionner. J'espère avoir été le plus clair possible. Dans le cas contraire, n'hésitez pas à me contacter via la messagerie de l'ENT Néo.</p>
+M. Lebas
+</p>
+    <!-- Compétences -->
+    <button class="accordion acc-cpt">Compétences</button>
+    <div class="panel">
+      <p class="lead">Dans les bulletins du collège n'apparaissent que des compétences. Les élèves seront donc exclusivement évalués de cette façon, en accords avec les demandes institutionnelles.
+        </br>Les six compétences mises en jeu sont : <b>Raisonner, Chercher, Calculer, Représenter, Modéliser et Communiquer </b>; et seront évaluées selon le barème suivant.</p>
+      <ul>
+        <li><strong>Rouge : niveau Insuffisant</strong> — La copie montre que l'élève n'a pas fait le minimum demandé en classe, à savoir : venir (ou rattrapper les cours manqués),
+          suivre attentivement la séance, poser des questions en cas d'incompréhension et faire ses devoirs. S'il fait ces efforts, il devrait au moins être en orange..</li>
+        <li><strong>Orange : niveau Fragile</strong> — L'élève fait ce qu'il faut en cours, a compris ce qu'il fallait faire mais fait encore trop d'erreurs. C'est avec de l'entraînement, par du travail et de la répétition que le niveau s'améliorera.</li>
+        <li><strong>Vert : niveau Satisfaisant</strong> — L'élève a acquis la compétence évaluée. Il peut y avoir encore des erreurs, mais il est clair que l'élève a compris ce qu'il fallait faire et comment le faire.
+          Un élève qui a tout juste sur une tâche classique aura un niveau satisfaisant.</li>
+        <li><strong>Vert + : niveau Très Satisfaisant</strong> — L'élève a montré qu'il était en réussite même sur une évaluation particulièrement difficile,
+          montrant une maîtrise au delà des attendus. Ce niveau ne peut pas être validé sur toutes les évaluations, notamment celles qui ne comportent que des questions accessibles à tous.
+          Un élève n'a pas besoin d'avoir un niveau très satisfaisant pour être en réussite. </li>
+      </ul>
+      <p>
+      Sur les copies seront indiquées les initiales "I", "F", "S" ou "TS" pour indiquer les niveaux atteints.</p>
 
-  <div class="w3-card-4 w3-margin w3-white">
-    <div class="w3-container">
-      <h3><b>Notation par compétences</b></h3>
     </div>
-    <div class="w3-container">
-      <p> Les élèves seront notés très principalement par compétence.
-        Les compétences mathématiques sont au nombre de six
-        (raisonner, chercher, calculer, représenter, modéliser, communiquer),
-        mais d'autres compétences pourront être évaluées
-        (attitude, travail en groupe...).
-        <p>
-          L'évaluation est subjective et dépend de chaque exercice,
-          mais la lecture des différentes "couleurs" doit se faire comme telle :
-        <ul>
-          <li>Rouge : Niveau insuffisant <br>
-            L'élève n'a pas fait le minimum demandé en classe, à savoir :
-            venir (ou rattrapper les cours manqués), suivre attentivement la séance,
-            poser des questions en cas d'incompréhension et faire ses devoirs.
-            S'il fait ces efforts, il devrait au moins être en orange.</li><br>
-          <li>Orange : Niveau fragile <br>
-            L'élève fait ce qu'il faut en cours, a compris ce qu'il fallait faire mais fait encore trop d'erreurs.
-            C'est par le travail et la répétition que le niveau s'améliorera.</li><br>
-          <li>Vert : Niveau satisfaisant <br>
-            L'élève a acquis la compétence évaluée. Il peut y avoir encore des erreurs,
-            mais il est clair que l'élève a compris ce qu'il fallait faire et comment le faire.
-            Un élève qui a tout juste sur une tâche normale aura un niveau satisfaisant.</li><br>
-          <li> Vert plus : Niveau très satisfaisant <br>
-            L'élève a montré qu'il était en réussite même sur une évaluation particulièrement difficile,
-            montrant une maîtrise au delà des attendus.
-            Ce niveau ne peut pas être validé sur toutes les évaluations,
-            notamment celles qui ne comportent que des questions accessibles à tous.
-            Un élève n'a pas besoin d'avoir un niveau très satisfaisant pour être en réussite. </li>
-    </div>
-  </div>
 
-  <!-- Blog entry -->
-
-
-  <div class="w3-card-4 w3-margin w3-white">
-    <div class="w3-container">
-      <h3><b>Evaluations</b></h3>
-    </div>
-    <div class="w3-container">
-      <p> Afin de noter au mieux par compétence, à la fin de chaque chapitre, il y aura deux contrôles.
-        <ul>
-          <li>Le premier contrôle est classique. Une note par exercice, en interrogeant sur des micro-compétences.<br>
-            Les exercices étant faciles, la note maximale est "Satisfaisant"
-            </li><br>
-          <li>Suite à ce premier contrôle, il y aura rendu des copies en classe,
-            correction des points les plus importants ou les moins bien compris, et du temps pour s'entraîner sur ses erreurs.</li><br>
-          <li>Le deuxième contrôle fait suite à ce temps et est soit un contrôle d'amélioration soit un contrôle d'approfondissement.<br>
-              Les élèves ayant eu des résultats "Satisfaisant" au premier contrôle auront un sujet plus difficile (à très difficile) la deuxième fois.
-              S'ils réussissent, ils décrocheront un "Très satisfaisant" dans la compétence. Sinon ils conserveront leur note.<br>
-              Les autres élèves passeront de nouveau un contrôle au sujet proche du premier et tenteront de mieux s'en sortir.
-              La meilleure des deux notes seront conservée et l'autre effacée.
-            </li><br>
-          </ul>
-        </p>
-      <p> Outre ces contrôles de fin de chapitre, il y aura de nombreuses autres interrogations : calcul mental de deux minutes en début ou fin de séance, travail de groupe en classe, travaux en binôme,
-        exposés oraux, narrations de recherche, progressions en autonomie sur un plan de travail...</p>
-
-      <p>Enfin, parce que la note sur 20 permet parfois aux élèves et à leur famille de mieux se situer,
-        il y aura quelques fois dans l'année des contrôles bilan notés sur 20 et portant sur l'ensemble de l'année jusqu'à la date de l'évaluation.<br>
-        Etant donné le vaste programme sur lequel porte ces évaluations, les élèves auront le droit d'avoir avec eux leur cahier de cours à la condition expresse qu'il soit impeccablement tenu.</p>
-    </div>
-  </div>
-
-<!-- END BLOG ENTRIES -->
-</div>
-
-<!-- Introduction menu -->
-<div class="w3-col l4">
-  <!-- About Card -->
-  <div class="w3-card w3-margin w3-margin-top">
-  <img src="photocollege.jpg" style="width:100%">
-    <div class="w3-container w3-white">
-      <h4><b>Page des parents</b></h4>
-      <p>Sur cette page, j'expliciterai le fonctionnement de mes cours, à destination en particulier des parents</br>
-
+    <!-- Plan de progression -->
+    <button class="accordion acc-plan">Plan de progression</button>
+    <div class="panel">
+      <p>
+        Cette année nous travaillerons en "plan de progression". Cousin du "plan de travail", il en reprend la philosophie mais la met en oeuvre différemment.
+      </p>
+      <p>
+        Les notions nouvelles seront abordées collectivement, le plus souvent par des jeux ou des activités, et institutionnalisées dans le cahier de cours.
+        Cette phase peut être longue, s'étale sur plusieurs séances, et les élèves doivent absolument tous avoir tout compris de ce qu'ils écrivent sur leur cahier.
+      </p>
+      <p>
+        Une fois le cours compris, il s'agit de le maîtriser. La phase de progrès des élèves sur les compétences visées va se faire de façon individuelle.
+        Le sujet du contrôle est donné à l'avance, et les élèves ont une grande quantité d'exercices à leur disposition qui leur permet de s'entraîner.
+        Le but est que chacun soit confronté à une tâche qui le mette en difficulté mais qui ne soit pas insurmontable. Ces exercices ne seront donc pas les mêmes pour tous les élèves et chacun pourra prendre le temps de surmonter ses difficultés.
+        Les élèves sont en îlots afin de favoriser l'entraide. Les corrections du iParcours sont photocopiées et disponibles en classe.
+        Les exerciseurs Labomep et Mathlive sont configurés pour que chaque erreur ait sa correction et que les élèves aient droit à autant d'essais qu'ils le souhaitent pour réussir.
+        Enfin, cette organisation dégage beaucoup de temps au professeur qui peut circuler dans la salle et aider les élèves individuellement.
+      </p>
+      <p>
+        A l'issue de cette phase de progression individuelle, l'évaluation est la même pour tout le monde et a lieu pour tout le monde en même temps, de façon classique.
       </p>
     </div>
-  </div><hr>
 
-  <!-- Posts -->
-  <div class="w3-card w3-margin">
-    <div class="w3-container w3-padding">
-      <h4>Raccourcis importants</h4>
+    <!-- Évaluations -->
+    <button class="accordion acc-eval">Évaluations</button>
+    <div class="panel">
+      <p class="lead">Les évaluations classiques sont prévues pour durer quinze minutes environ. Elles sont annoncées plusieurs jours à l'avance et indiquées sur Pronote.
+        Un énoncé proche de ce qui sera demandé au contrôle sera également disponible à l'avance sur Pronote et sur ce site. </p>
+      <p>
+        Les élèves disposent tous du temps qu'ils souhaitent pour finir leur évaluation.
+        Les élèves ayant besoin d'un tiers-temps peuvent donc prendre le temps de réaliser leur contrôle à leur rythme sans que l'énoncé soit tronqué.
+        Les énoncés lorsqu'ils sont imprimés seront prévus pour être lisibles par tous en suivant les recommandations d'orthophonistes.
+        Lorsqu'un élève a fini et a rendu son devoir, il peut réaliser l'activité qu'il souhaite tant qu'il ne dérange pas ses camarades qui composent.
+        En particulier, il peut lire (un livre personnel ou un emprunté dans la bibliothèque de classe), dessiner, colorier, ou avancer son plan de progression sur sa tablette.
+      </p>
+      <p>
+        Après rendu et correction des évaluations, les élèves auront l'occasion de s'entraîner à nouveau sur les notions et de valider leurs progrès.
+        Ils pourront ensuite avoir un contrôle de rattrapage, et conserver la meilleure des deux notes, ou d'approfondissement, et de viser un Vert +.</p>
+        En résumé :
+      <ul>
+        <li><strong>Contrôle Classique</strong> : exercices accessibles, note max « Satisfaisant ».</li>
+        <li><strong>Retour & entraînement</strong> : correction ciblée, travail sur les erreurs et temps pour s'entraîner de nouveau.</li>
+        <li><strong>Contrôle Rattrapage ou Approfondissement</strong> : amélioration (meilleure note conservée) ou approfondissement (viser « Très satisfaisant »).</li>
+      </ul>
+      <p>En plus de ces évaluations classiques, les élèves seront évalués sur d'autres dispositifs : exerciseurs, calcul mental, travaux de groupe, binômes, oraux, narrations de recherche…</p>
     </div>
-    <ul class="w3-ul w3-hoverable w3-white">
-      <li class="w3-padding-16">
-        <a href="page6.html">
-        <span class="w3-large">Page des 6èmes</span><img src="6eme.png" alt="Image" class="w3-left w3-margin-right" style="width:50px"></a><br>
-        <span>Les cours de 6ème</span>
-      </li>
 
-      <li class="w3-padding-16">
-        <a href="page4.html">
-        <span class="w3-large">Page des 4èmes</span><img src="4eme.png" alt="Image" class="w3-left w3-margin-right" style="width:50px"></a><br>
-        <span>Les cours de 4ème</span>
-      </li>
-      <li class="w3-padding-16">
-        <a href="parents.html">
-        <span class="w3-large">Page des parents</span></a><br>
-        <span>Les cours de M. Lebas</span>
-      </li>
-	<li class="w3-padding-16">
-		<span class="w3-large">
-		<a href="Web/atelier web.html">Atelier Web</span></a><br>
-		<span>Cinéma et web</span>
-		</li>
+    <!-- Matériel -->
+    <button class="accordion acc-mat">Matériel</button>
+    <div class="panel">
+      <p class="lead">Liste du matériel demandé</p>
+      <ul>
+        <li><b>Tablette </b>: elle est apportée à chaque séance, chargée.</li>
+        <li><b>Cahier d'activité </b>: grand format et petits carreaux, il sert de support de réflexion pour tous les types de mise en pratique des connaissances.
+          Il est apporté à chaque séance.</li>
+        <li><b>Cahier de cours </b>: grand format et grands carreaux. Les élèves y copient le cours, mais il reste en classe. Les cours sont disponibles sur ce site.</li>
+        <li><b>iParcours </b>: cahier d'exercices (édition 2025 pour les 6èmes, 2022 pour les 5èmes et 4èmes).
+          Il reste en classe et permet aux élèves d'avcoir de nombreux exercices sur lesquels s'entraîner lors des plans de progression</li>
+        <li><b>Calculatrice, règle, crayons... </b>: toujours dans le sac et utiles également dans d'autres disciplines.</li>
+        <li><b>Matériel de géométrie </b>: équerre, rapporteur, compas. Ne seront utiles que lors des chapitres de géométrie.
+          Les élèves peuvent ne les amener que lorsque je leur indique sur pronote.</li>
+      </ul>
+    </div>
 
-      <li class="w3-padding-16">
-        <span class="w3-large">
-                  <a href="Mathador.html">Mathador</span></a><br>
-        <span>Exemple de mathador</span>
-              </li>
+    <!-- Note sur 20 -->
+    <button class="accordion acc-note">Note sur 20</button>
+    <div class="panel">
+      <p>
+        Nouveauté de la rentrée 2025.
+      </p>
+      <p>
+        Afin d'aider les parents à mieux suivre leurs enfants, je mettrai régulièrement une note sur 20. Elle sera calculée avec  :
+        <ul>
+          <li>Comportement : 7 points</li>
+          <li>Avancement du plan de progression : 5 points</li>
+          <li>Tenue du cahier de cours : 4 points</li>
+          <li>Note au dernier devoir : 4 points</li>
+        </ul>
+        Cette note n'indiquera donc pas le niveau de compétence de l'élève dans
+        les notions abordées mais a vocation à servir d'instrument de mesure pour savoir s'il est dans une démarche de progrès ou non.
+      </p>
+    </div>
 
-              <li class="w3-padding-16">
-                <span class="w3-large">
-                <a href="Web/vacances apprenantes.html">Vacances apprenantes</span></a><br>
-                <span>Cinéma et web</span>
-                </li>
+    <!-- Labomep -->
+    <button class="accordion acc-labomep">Labomep</button>
+    <div class="panel">
+      <p>
+        Labomep est un outil en ligne qui permet aux élèves de s’entraîner de manière autonome et personnalisée.
+        Les exercices proposés s’adaptent au niveau et donnent une correction immédiate, avec la possibilité de recommencer autant de fois que nécessaire.
+      </p>
+      <p>
+        Elément essentiel du plan de progression, une séquence sera disponible à chaque chapitre et sera évaluée selon le barème suivant :
+        <ul>
+          <li> Rouge - Insuffisant : l'élève n'a même pas essayé tous les exercices à faire.</li>
+          <li> Orange - Fragile : tous les exercices ont été essayés, ou l'un d'eux est réussi à au moins 70%.</li>
+          <li> Vert - Satisfaisant : tous les exercices sont réussis à au moins 70%.</li>
+          <li> Vert + - Très Satisfaisant : tous les exercices sont réussis à 100%.</li>
+        </ul>
+      </p>
+      <p>
+      Les séquences Labomep sont systématiquement commencées en classe et peuvent être poursuivies à la maison. Les élèves sont encouragés à persévérer jusqu'à réussir.</br>
+      L'exerciseur Mathlive, plus récent, viendra compléter l'offre auprès des élèves mais il est pour l'instant moins complet.
+      </p>
+    </div>
 
-      <li class="w3-padding-16">
-        <a href="https://0132409y.index-education.net/pronote/eleve.html">
-        <img src="logopronote.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Pronote</span></a><br>
-        <span>Un raccourci vers Pronote</span>
-      </li>
-      <li class="w3-padding-16">
-        <a href="http://www.clg-daudet-istres.ac-aix-marseille.fr/spip/">
-        <img src="logocollege.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Site du collège</span></a><br>
-        <span>Le site du collège, dans lequel vous retrouvez toutes les actualités</span>
-      </li>
+    <!-- Devoirs -->
+    <button class="accordion acc-devoir">Devoirs</button>
+    <div class="panel">
+      <p>
+        Les élèves doivent avoir leur tablette chargée à chaque cours, que ce soit inscrit sur Pronote ou non. </p>
+      <p>
+        Il y aura très peu -voire pas- de devoirs donnés.
+        En revanche, les élèves sont encouragés à travailler sur leur plan de progression à la maison, en particulier en travaillant avec Labomep et Mathlive.
+      </p>
+      <p>
+        Les chapitres étant conclus avant les vacances afin de commencer les nouvelles périodes par de nouvelles notions, il n'y aura normalement pas de devoirs à faire pendant les vacances.
+      </p>
+    </div>
 
-    </ul>
-  </div>
-  <hr>
+    <!-- Salle -->
+    <button class="accordion acc-salle">Salle</button>
+    <div class="panel">
+      <p>
+        Nous avons la chance de pouvoir rester en A226 pour chacune de nos séances. Elle est donc organisée pour être la plus efficace possible.
+        <ul>
+          <li>Les tables des élèves sont disposées de façons mixte, pour certaines en îlots, pour d'autre de façon linéaire. Pendant les phases de travail les élèves peuvent échanger avec leurs voisins de table mais pas avec les autres.</li>
+          <li>Un meuble accueille les cahiers de cours et les iParcours des élèves afin d'alléger leurs sacs.</li>
+          <li>Des mouchoirs sont à disposition des élèves. Ils n'ont pas besoin de demander la permission pour se servir.</li>
+          <li>Une bannette accueille les devoirs non récupérés des élèves qui étaient absents lors du rendu de l'évaluation. Ils peuvent la retrouver ici à leur retour en classe.</li>
+          <li>Huit places, près des prises électriques, permettent aux élèves de recharger leur tablette pour travailler. Leur usage doit cependant rester exceptionnel.</li>
+          <li>Une bibliothèque de classe permet aux élèves de lire pendant les temps calmes, notamment après les contrôles ou lors d'une pause dans un créneau de deux heures.
+             Elle comporte des comics, des mangas, des romans jeunesse, des romans d'Alphonse Daudet, des magazines, des sudokus, du codage informatique, des publications en langue étrangère,
+             mais aussi des brochures sur l'orientation ou le harcèlement.</li>
+        </ul>
+      </p>
+    </div>
 
+  </main>
 
+  <footer>
+    Site rédigé par J. Lebas – Collège Alphonse Daudet d’Istres
+  </footer>
 
-<!-- END Introduction Menu -->
-</div>
+  <!-- Ancre pour retour en haut -->
+  <div id="top" hidden></div>
 
-<!-- END GRID -->
-</div><br>
-
-<!-- END w3-content -->
-</div>
-
-<!-- Footer -->
-<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-  Site rédigé par J. Lebas pour le collège Alphonse Daudet d'Istres
-</footer>
-
+  <script>
+    // Toggle accordéons
+    document.querySelectorAll('.accordion').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        btn.classList.toggle('active');
+        const panel = btn.nextElementSibling;
+        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
 </body>
 </html>
