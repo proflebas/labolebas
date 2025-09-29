@@ -59,6 +59,25 @@
     .tile.trio       { background: linear-gradient(135deg, #8e24aa, #ab47bc); }   /* violet */
     .tile.mathlive   { background: linear-gradient(135deg, #546e7a, #78909c); }   /* gris bleuté (transition) */
     .tile.chronoline { background: linear-gradient(135deg, #6d4c41, #8d6e63); }   /* brun doux (ancrage terre) */
+/* Tuile NumWorks (jaune/orange de la charte) */
+.tile.numworks{
+  background: linear-gradient(135deg, #f39c12, #ffc107); /* orange → jaune NumWorks */
+  color: #ffffff; /* garde la cohérence du site */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25); /* lisibilité sur jaune */
+  position: relative;
+}
+
+/* hover un peu plus soutenu */
+.tile.numworks:hover{
+  filter: saturate(1.05) brightness(0.98);
+}
+
+/* Tuile Néo */
+.tile.neo {
+  background: linear-gradient(135deg, #0099cc, #00aeef); /* bleu Néo */
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
 
     /* Gros accordions colorés par thème */
     .accordion {
@@ -192,12 +211,14 @@
   <div class="tile-container">
     <a class="tile labomep" href="https://labomep.sesamath.net" target="_blank">Labomep</a>
     <a class="tile mathador" href="Mathador.html" target="_blank">Mathador</a>
+    <a class="tile neo" href="https://www.eduprovence.fr/timeline/timeline" target="_blank" rel="noopener">Néo</a>
     <a class="tile iparcours6e" href="https://www.iparcours.fr/ouvrages/ouvrages.php?ouvrage=Cahier62025" target="_blank">iParcours 6e</a>
     <a class="tile iparcours5e" href="https://www.iparcours.fr/ouvrages/ouvrages.php?ouvrage=Cahier52022" target="_blank">iParcours 5e</a>
     <a class="tile iparcours4e" href="https://www.iparcours.fr/ouvrages/ouvrages.php?ouvrage=Cahier42022" target="_blank">iParcours 4e</a>
     <a class="tile mentales" href="https://mathsmentales.net" target="_blank">MathsMentales</a>
     <a class="tile trio" href="https://www.acamus.net/images/dossier_personnel/jpavageau/trio_math_game_acpoitiers/index.html" target="_blank">Trio</a>
     <a class="tile mathlive" href="https://go.mathlive.fr" target="_blank">MathLive</a>
+    <a class="tile numworks" href="https://www.numworks.com/calculator/" target="_blank" rel="noopener" aria-label="Calculatrice NumWorks en ligne">NumWorks</a>
     <a class="tile chronoline" href="https://degrangem.forge.apps.education.fr/ChronoLine" target="_blank">Chronoline</a>
   </div>
 </section>
@@ -244,8 +265,10 @@
 
   <button class="accordion cat-geo">Géométrie</button>
   <div class="panel">
-    <button class="sub-accordion">G1 – Distances</button>
-    <div class="sub-panel"></div>
+    <button class="sub-accordion">G1 – Points, droites et distances</button>
+    <div class="sub-panel">
+    
+    </div>
 
     <button class="sub-accordion">G2 – Cercles et disques</button>
     <div class="sub-panel"></div>
