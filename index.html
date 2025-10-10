@@ -485,6 +485,20 @@
 
 <section id="5e">
   <h2>Ressources 5e</h2>
+  <!-- Switch d'affichage : Thèmes / Progression (5e) -->
+<div class="view-toggle" data-scope="5e">
+  <button class="view-btn is-active" data-view="theme">Thèmes</button>
+  <button class="view-btn" data-view="progression">Progression</button>
+</div>
+
+<!-- Vue PAR PROGRESSION (5e) — générée dynamiquement -->
+<section id="cinquieme-by-progression" class="by-prog is-hidden" aria-label="Progression 5e">
+  <ol class="prog-seq" id="seq-5e"></ol>
+</section>
+
+<!-- WRAPPER de la vue THÈMES (5e) -->
+<section id="cinquieme-by-theme" class="by-theme">
+  <!-- ↓↓↓ garde ici TOUT ce que tu as déjà (accordions 5e, sous-accordions, liens…) ↓↓↓ -->
   <button class="accordion cat-nombres">Nombres et calcul</button>
   <div class="panel">
     <button class="sub-accordion">5N1 – Division euclidienne</button>
@@ -599,9 +613,23 @@
     <div class="sub-panel"></div>
   </div>
 </section>
+</section> <!-- fin de #cinquieme-by-theme -->
 
 <section id="4e">
   <h2>Ressources 4e</h2>
+  <!-- Switch d'affichage : Thèmes / Progression (4e) -->
+<div class="view-toggle" data-scope="4e">
+  <button class="view-btn is-active" data-view="theme">Thèmes</button>
+  <button class="view-btn" data-view="progression">Progression</button>
+</div>
+
+<!-- Vue PAR PROGRESSION (4e) — générée dynamiquement -->
+<section id="quatrieme-by-progression" class="by-prog is-hidden" aria-label="Progression 4e">
+  <ol class="prog-seq" id="seq-4e"></ol>
+</section>
+
+<!-- WRAPPER de la vue THÈMES (4e) -->
+<section id="quatrieme-by-theme" class="by-theme">
   <button class="accordion cat-nombres">Nombres et calcul</button>
   <div class="panel">
     <button class="sub-accordion">4N1 – Nombres premiers</button>
@@ -788,6 +816,7 @@
     </div>
   </div>
 </section>
+</section> <!-- fin de #quatrieme-by-theme -->
 
 <section id="bonus">
   <h2>Bonus : Jeux et Projets</h2>
@@ -854,17 +883,7 @@
   })();
 </script>
 <script>
-  // Ouvrir le bon accordéon + sous-accordion à partir d'un code (ex: "6N1")
-  function openUnitByCode(code){
-    if(!code) return;
-    // Assurer qu'on est en vue "par thèmes"
-    const toggle = document.querySelector('.view-toggle[data-scope="6e"]');
-    if(toggle){
-      const btnTheme = toggle.querySelector('[data-view="theme"]');
-      if(btnTheme && !btnTheme.classList.contains('is-active')){
-        btnTheme.click();
-      }
-    }
+
     // Trouver le sous-accordion cible
     const target = document.querySelector('.sub-accordion[data-code="'+code+'"]');
     if(!target) return;
@@ -919,54 +938,48 @@ const ORDER_6E = [
 ];
 
 // 2) Utilitaire: normaliser un code extrait du texte "6N1 – ...", "N2 – ..."
-function normCode(s){
-  if(!s) return "";
-  // garde chiffres+lettres, met un "6" initial si absent (pour uniformiser 6N2 vs N2)
+function normCode(s, defaultLevel = "") {
+  if (!s) return "";
   const raw = String(s).trim().toUpperCase();
-  const m = raw.match(/^(\d?)([NGMDA])\s*0?(\d+)/); // ex. "6N1", "N2", "G03"
-  if(!m) return "";
-  const level = m[1] || "6";
+  const m = raw.match(/^(\d?)([NGMDA])\s*0?(\d+)/); // ex. "5N1", "N2", "G03"
+  if (!m) return "";
+  const level = m[1] || defaultLevel;   // ← ajoute le niveau par défaut si absent
   const domain = m[2];
-  const num = String(parseInt(m[3],10));
+  const num = String(parseInt(m[3], 10));
   return `${level}${domain}${num}`;
 }
 
 // 3) Construire un index {code -> {button, panel, label, domain}}
-function buildIndex6e(){
-  const scope = document.querySelector('#sixieme-by-theme') || document.querySelector('#6e');
-  if(!scope) return {};
+function buildIndex(scopeThemeSelector, defaultLevel) {
+  const scope = document.querySelector(scopeThemeSelector);
+  if (!scope) return {};
   const entries = {};
-  scope.querySelectorAll('.panel .sub-accordion').forEach(btn=>{
+  scope.querySelectorAll('.panel .sub-accordion').forEach(btn => {
     const txt = btn.textContent || "";
-    const code = normCode(txt.split('–')[0]); // partie avant "–"
-    if(!code) return;
-    const label = txt.trim(); // on reprend tel quel
-    // Domaine pour la couleur du badge
+    const left = (txt.includes('–') ? txt.split('–')[0] : txt).trim();
+    const code = normCode(left, defaultLevel);   // ← utilise le niveau par défaut
+    if (!code) return;
+    const label = txt.trim();
     let dom = 'n';
-    if(code.includes('G')) dom = 'g';
-    else if(code.includes('M')) dom = 'm';
-    else if(code.includes('D')) dom = 'd';
-    else if(code.includes('A')) dom = 'a';
-    entries[code] = {
-      btn,
-      panel: btn.nextElementSibling,
-      label,
-      domain: dom
-    };
+    if (code.includes('G')) dom = 'g';
+    else if (code.includes('M')) dom = 'm';
+    else if (code.includes('D')) dom = 'd';
+    else if (code.includes('A')) dom = 'a';
+    entries[code] = { btn, panel: btn.nextElementSibling, label, domain: dom };
   });
   return entries;
 }
 
 // 4) Fabriquer la liste continue dans #seq-6e
 function renderProgression6e(){
-  const map = buildIndex6e();
+  const map = buildIndex('#sixieme-by-theme', '6'); // ← au lieu de buildIndex6e()
   const list = document.querySelector('#seq-6e');
   if(!list) return;
 
-  list.innerHTML = ""; // reset
+  list.innerHTML = "";
   ORDER_6E.forEach(code=>{
     const it = map[code];
-    if(!it) return; // si pas encore créé côté "thèmes", on saute
+    if(!it) return;
     const li = document.createElement('li');
     li.className = 'prog-item';
     li.innerHTML = `
@@ -978,7 +991,15 @@ function renderProgression6e(){
     list.appendChild(li);
   });
 }
-
+// Clics dans la progression 6e (scopés)
+document.addEventListener('click', (e)=>{
+  const btn = e.target.closest('.prog-jump');
+  if(!btn) return;
+  if(document.querySelector('#seq-6e')?.contains(btn)){
+    e.preventDefault();
+    openUnitByCodeGeneric('6e', '#sixieme-by-theme', btn.getAttribute('data-code'));
+  }
+});
 // 5) Click: aller à la bonne unité (réutilise la fonction fournie précédemment)
 function openUnitByCode(code){
   if(!code) return;
@@ -1001,7 +1022,27 @@ function openUnitByCode(code){
   if(subPanel && subPanel.style.display !== 'block'){ target.click(); }
   target.scrollIntoView({behavior:'smooth', block:'start'});
 }
-
+function openUnitByCodeGeneric(scope, themeSel, code) {
+  if (!code) return;
+  const toggle = document.querySelector(`.view-toggle[data-scope="${scope}"]`);
+  if (toggle) {
+    const btnTheme = toggle.querySelector('[data-view="theme"]');
+    if (btnTheme && !btnTheme.classList.contains('is-active')) btnTheme.click();
+  }
+  const candidates = Array.from(document.querySelectorAll(`${themeSel} .panel .sub-accordion`));
+  const defaultLevel = scope === '5e' ? '5' : scope === '4e' ? '4' : '';
+  const target = candidates.find(b => {
+    const left = (b.textContent || "").split('–')[0];
+    return normCode(left, defaultLevel) === code;
+  });
+  if (!target) return;
+  const panel = target.closest('.panel');
+  const accordion = panel ? panel.previousElementSibling : null;
+  if (accordion && panel && panel.style.display !== 'block') { accordion.click(); }
+  const subPanel = target.nextElementSibling;
+  if (subPanel && subPanel.style.display !== 'block') { target.click(); }
+  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 // 6) Clics dans la progression
 document.addEventListener('click', (e)=>{
   const btn = e.target.closest('.prog-jump');
@@ -1012,6 +1053,147 @@ document.addEventListener('click', (e)=>{
 
 // 7) Initialiser l’affichage
 renderProgression6e();
+</script>
+
+<script>
+/* ========= Utilities communes (réutilise l’existant si déjà en place) ========= */
+function normCode(s, defaultLevel = "") {
+  if (!s) return "";
+  const raw = String(s).trim().toUpperCase();
+  const m = raw.match(/^(\d?)([NGMDA])\s*0?(\d+)/); // ex. "5N1", "N2", "G03"
+  if (!m) return "";
+  const level = m[1] || defaultLevel;   // ← ajoute le niveau par défaut si absent
+  const domain = m[2];
+  const num = String(parseInt(m[3], 10));
+  return `${level}${domain}${num}`;
+}
+
+function buildIndex(scopeThemeSelector){
+  const scope = document.querySelector(scopeThemeSelector);
+  if(!scope) return {};
+  const entries = {};
+  scope.querySelectorAll('.panel .sub-accordion').forEach(btn=>{
+    const txt = btn.textContent || "";
+    const left = (txt.includes('–') ? txt.split('–')[0] : txt).trim();
+    const code = normCode(left);
+    if(!code) return;
+    const label = txt.trim(); // on reprend le libellé exactement tel qu’affiché dans la vue “thèmes”
+    let dom = 'n';
+    if(code.includes('G')) dom = 'g';
+    else if(code.includes('M')) dom = 'm';
+    else if(code.includes('D')) dom = 'd';
+    else if(code.includes('A')) dom = 'a';
+    entries[code] = { btn, panel: btn.nextElementSibling, label, domain: dom };
+  });
+  return entries;
+}
+
+function renderProgression(containerSelector, order, indexMap){
+  const list = document.querySelector(containerSelector);
+  if(!list) return;
+  list.innerHTML = "";
+  order.forEach(code=>{
+    const it = indexMap[code];
+    if(!it) return; // si un chapitre n’est pas encore saisi côté “thèmes”, on l’ignore
+    const li = document.createElement('li');
+    li.className = 'prog-item';
+    const shortCode = code.replace(/^\d/, ''); // enlève le niveau visuel: "5N1" -> "N1"
+    li.innerHTML = `
+      <span class="tag tag-${it.domain}">${shortCode}</span>
+      <button class="prog-jump" data-code="${code}" aria-label="Aller à ${it.label}">
+        ${it.label}
+      </button>
+    `;
+    list.appendChild(li);
+  });
+}
+
+function setupToggle(scope, themeSel, progSel, storageKey){
+  const toggle = document.querySelector(`.view-toggle[data-scope="${scope}"]`);
+  if(!toggle) return;
+  const btnTheme = toggle.querySelector('[data-view="theme"]');
+  const btnProg  = toggle.querySelector('[data-view="progression"]');
+  const viewTheme = document.querySelector(themeSel);
+  const viewProg  = document.querySelector(progSel);
+  function setMode(mode){
+    const isProg = (mode==='progression');
+    viewTheme?.classList.toggle('is-hidden', isProg);
+    viewProg?.classList.toggle('is-hidden', !isProg);
+    btnTheme.classList.toggle('is-active', !isProg);
+    btnProg.classList.toggle('is-active', isProg);
+    try{ localStorage.setItem(storageKey, mode); }catch(e){}
+  }
+  let saved=null; try{ saved=localStorage.getItem(storageKey); }catch(e){}
+  setMode(saved==='progression' ? 'progression' : 'theme');
+  btnTheme.addEventListener('click', ()=> setMode('theme'));
+  btnProg.addEventListener('click',  ()=> setMode('progression'));
+}
+
+function openUnitByCodeGeneric(scope, themeSel, code){
+  if(!code) return;
+  // bascule vers "Thèmes" pour ce niveau
+  const toggle = document.querySelector(`.view-toggle[data-scope="${scope}"]`);
+  if(toggle){
+    const btnTheme = toggle.querySelector('[data-view="theme"]');
+    if(btnTheme && !btnTheme.classList.contains('is-active')) btnTheme.click();
+  }
+  // trouver le bouton cible dans le wrapper "thèmes" du niveau
+  const candidates = Array.from(document.querySelectorAll(`${themeSel} .panel .sub-accordion`));
+  const target = candidates.find(b => normCode((b.textContent||"").split('–')[0]) === code);
+  if(!target) return;
+
+  const panel = target.closest('.panel');
+  const accordion = panel ? panel.previousElementSibling : null;
+  if(accordion && panel && panel.style.display !== 'block'){ accordion.click(); }
+  const subPanel = target.nextElementSibling;
+  if(subPanel && subPanel.style.display !== 'block'){ target.click(); }
+  target.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+/* ========= Séquences (ordre linéaire) =========
+   Sources : tes PDF “Progression 5e / 4e” (sans coupure vacances). */
+const ORDER_5E = [
+  "5N1","5M1","5N2","5G1","5D1","5N3","5G2","5D2","5G3","5A1",
+  "5N4","5A2","5D3","5G4","5M2","5N5","5A3","5N6","5G5","5N7",
+  "5G6","5M3","5N8","5D4"
+];
+const ORDER_4E = [
+  "4N1","4G1","4D1","4N2","4A1","4N3","4G2","4N4","4D2","4A2",
+  "4N5","4G3","4M1","4N6","4N7","4G4","4N8","4D3","4A3","4G5",
+  "4D4","4N9","4M2"
+];
+
+/* ========= Initialisation 5e ========= */
+(function(){
+  setupToggle('5e', '#cinquieme-by-theme', '#cinquieme-by-progression', 'view5e');
+const map5e = buildIndex('#cinquieme-by-theme', '5');
+  renderProgression('#seq-5e', ORDER_5E, map5e);
+  // clics progression 5e
+  document.addEventListener('click', (e)=>{
+    const btn = e.target.closest('.prog-jump');
+    if(!btn) return;
+    if(document.querySelector('#seq-5e')?.contains(btn)){
+      e.preventDefault();
+      openUnitByCodeGeneric('5e', '#cinquieme-by-theme', btn.getAttribute('data-code'));
+    }
+  });
+})();
+
+/* ========= Initialisation 4e ========= */
+(function(){
+  setupToggle('4e', '#quatrieme-by-theme', '#quatrieme-by-progression', 'view4e');
+const map4e = buildIndex('#quatrieme-by-theme', '4');
+  renderProgression('#seq-4e', ORDER_4E, map4e);
+  // clics progression 4e
+  document.addEventListener('click', (e)=>{
+    const btn = e.target.closest('.prog-jump');
+    if(!btn) return;
+    if(document.querySelector('#seq-4e')?.contains(btn)){
+      e.preventDefault();
+      openUnitByCodeGeneric('4e', '#quatrieme-by-theme', btn.getAttribute('data-code'));
+    }
+  });
+})();
 </script>
 </body>
 </html>
