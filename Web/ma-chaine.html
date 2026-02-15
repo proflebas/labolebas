@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ma Chaîne</title> <!-- Change le titre de l'onglet ici -->
+
+  <style>
+
+    /* La page entière */
+    body {
+      background-color: #f9f9f9; /* couleur de fond */
+      color: #111111;            /* couleur du texte */
+      font-family: Arial;
+      margin: 0;
+    }
+
+    /* La barre en haut */
+    header {
+      background-color: #ff0000; /* couleur de la barre */
+      color: white;
+      padding: 20px 30px;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    /* Le sous-titre sous la barre */
+    header p {
+      font-size: 14px;
+      font-weight: normal;
+      margin-top: 4px;
+      opacity: 0.85;
+    }
+
+    /* La liste de vidéos */
+    .liste {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    /* Une vidéo */
+    .video {
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* La vidéo YouTube intégrée */
+    .video iframe {
+      width: 100%;
+      height: 400px;
+      display: block;
+      border: none;
+    }
+
+    /* Le texte sous la vidéo */
+    .video-info {
+      padding: 15px 20px;
+    }
+
+    /* Le titre de la vidéo */
+    .video-info h2 {
+      font-size: 18px;
+      margin: 0 0 6px;
+    }
+
+    /* La description */
+    .video-info p {
+      font-size: 14px;
+      color: #666666; /* couleur du texte de description */
+      margin: 0;
+    }
+
+    /* Pied de page */
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #aaaaaa;
+      font-size: 13px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- La barre du haut -->
+  <header>
+    🎬 Ma Chaîne <!-- Change le nom ici -->
+    <p>Mes vidéos préférées</p> <!-- Change le sous-titre ici -->
+  </header>
+
+  <div class="liste">
+
+    <!-- VIDÉO 1 -->
+    <!-- Pour trouver le lien : sur YouTube, clique sur "Partager" puis "Intégrer",
+         et copie uniquement la partie src="..." -->
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <div class="video-info">
+        <h2>Titre de la vidéo</h2>
+        <p>Écris ici pourquoi tu aimes cette vidéo.</p>
+      </div>
+    </div>
+
+    <!-- VIDÉO 2 -->
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <div class="video-info">
+        <h2>Titre de la vidéo</h2>
+        <p>Écris ici pourquoi tu aimes cette vidéo.</p>
+      </div>
+    </div>
+
+    <!-- VIDÉO 3 -->
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <div class="video-info">
+        <h2>Titre de la vidéo</h2>
+        <p>Écris ici pourquoi tu aimes cette vidéo.</p>
+      </div>
+    </div>
+
+    <!-- VIDÉO 4 : copie ce bloc pour en ajouter une ! -->
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <div class="video-info">
+        <h2>Titre de la vidéo</h2>
+        <p>Écris ici pourquoi tu aimes cette vidéo.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>Fait par [ton prénom]</footer>
+
+</body>
+</html>
