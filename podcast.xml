@@ -75,6 +75,16 @@
       <itunes:duration>22:41</itunes:duration>
     </item>
     
+            <item>
+      <title>Episode 1 - Silence on lit !</title>
+      <description>Archive Février 26 - Radio'D revient sur Silence on lit !</description>
+      <link>https://labolebas.com/RadioD/Episodes/RadioD - Saison 25-26 - Episode 1 - Silence on lit.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/RadioD - Saison 25-26 - Episode 1 - Silence on lit.mp3" length="2164102" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/RadioD - Saison 25-26 - Episode 1 - Silence on lit.mp3</guid>
+      <pubDate>Tue, 17 Mar 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>2:29</itunes:duration>
+    </item>
     
   </channel>
 </rss>
