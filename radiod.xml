@@ -19,60 +19,15 @@
     </itunes:owner>
     <itunes:type>episodic</itunes:type>
 
-    <item>
-      <title>Erin - La revolte des stylos</title>
-      <link>https://labolebas.com/RadioD/Episodes/Erin%20-%20La%20revolte%20des%20stylos.mp3</link>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/Erin%20-%20La%20revolte%20des%20stylos.mp3" length="12345678" type="audio/mpeg"/>
-      <guid>https://labolebas.com/RadioD/Episodes/Erin%20-%20La%20revolte%20des%20stylos.mp3</guid>
-      <pubDate>Sat, 12 Apr 2025 08:00:00 +0000</pubDate>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-
-    <item>
-      <title>Maelys - La bataille des legumes</title>
-      <link>https://labolebas.com/RadioD/Episodes/Maelys%20-%20La%20bataille%20des%20legumes.mp3</link>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/Maelys%20-%20La%20bataille%20des%20legumes.mp3" length="23456789" type="audio/mpeg"/>
-      <guid>https://labolebas.com/RadioD/Episodes/Maelys%20-%20La%20bataille%20des%20legumes.mp3</guid>
-      <pubDate>Sat, 12 Apr 2025 08:00:00 +0000</pubDate>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-
-    <item>
-      <title>Ornella - Le pecheur presse</title>
-      <link>https://labolebas.com/RadioD/Episodes/Ornella%20-%20Le%20pecheur%20presse.mp3</link>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/Ornella%20-%20Le%20pecheur%20presse.mp3" length="34567890" type="audio/mpeg"/>
-      <guid>https://labolebas.com/RadioD/Episodes/Ornella%20-%20Le%20pecheur%20presse.mp3</guid>
-      <pubDate>Sat, 12 Apr 2025 08:00:00 +0000</pubDate>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-
-    <item>
-      <title>Conte de noel 2024</title>
-      <link>https://labolebas.com/RadioD/Episodes/RadioD%20-%2006%20-%20Conte%20de%20noel%202024.mp3</link>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/RadioD%20-%2006%20-%20Conte%20de%20noel%202024.mp3" length="45678901" type="audio/mpeg"/>
-      <guid>https://labolebas.com/RadioD/Episodes/RadioD%20-%2006%20-%20Conte%20de%20noel%202024.mp3</guid>
-      <pubDate>Wed, 25 Dec 2024 08:00:00 +0000</pubDate>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-
-    <item>
-      <title>Rafaele - Le mystere de la chaussette perdue</title>
-      <link>https://labolebas.com/RadioD/Episodes/Rafaele%20-%20Le%20mystere%20de%20la%20chaussette%20perdue.mp3</link>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/Rafaele%20-%20Le%20mystere%20de%20la%20chaussette%20perdue.mp3" length="56789012" type="audio/mpeg"/>
-      <guid>https://labolebas.com/RadioD/Episodes/Rafaele%20-%20Le%20mystere%20de%20la%20chaussette%20perdue.mp3</guid>
-      <pubDate>Sat, 12 Apr 2025 08:00:00 +0000</pubDate>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-
         <item>
       <title>Chronique du voyage en Angleterre</title>
       <description>Les élèves ont enregistré eux-mêmes et en direct le récit de leur voyage en Angleterre</description>
-      <link>https://labolebas.com/RadioD/Episodes/RadioD-Londres.mp3</link>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/RadioD-Londres.mp3" length="16705996" type="audio/mpeg"/>
-      <guid>https://labolebas.com/RadioD/Episodes/RadioD-Londres.mp3</guid>
+      <link>https://labolebas.com/RadioD/Episodes/RadioDaLondres.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/RadioDaLondres.mp3" length="20659720" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/RadioDaLondres.mp3</guid>
       <pubDate>Fri, 13 Mar 2026 12:00:00 +0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>22:41</itunes:duration>
+      <itunes:duration>23:50</itunes:duration>
     </item>
 
             <item>
@@ -84,6 +39,18 @@
       <pubDate>Tue, 17 Mar 2026 08:00:00 +0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>2:29</itunes:duration>
+    </item>
+
+
+            <item>
+      <title>Episode 3 - Rencontre avec Thierry Lamy</title>
+      <description>Des élèves de 6ème ont pu rencontrer Thierry Lamy, auteur de bandes dessinées, qui leur a parlé de son travail</description>
+      <link>https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode3-RencontreavecThierryLamy.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode3-RencontreavecThierryLamy.mp3" length="3742462" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode3-RencontreavecThierryLamy.mp3</guid>
+      <pubDate>Wed, 25 Mar 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>4:20</itunes:duration>
     </item>
 
   </channel>
