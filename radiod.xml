@@ -19,15 +19,15 @@
     </itunes:owner>
     <itunes:type>episodic</itunes:type>
 
-        <item>
-      <title>Chronique du voyage en Angleterre</title>
-      <description>Les élèves ont enregistré eux-mêmes et en direct le récit de leur voyage en Angleterre</description>
-      <link>https://labolebas.com/RadioD/Episodes/RadioDaLondres.mp3</link>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/RadioDaLondres.mp3" length="20659720" type="audio/mpeg"/>
-      <guid>https://labolebas.com/RadioD/Episodes/RadioDaLondres.mp3</guid>
-      <pubDate>Fri, 13 Mar 2026 12:00:00 +0000</pubDate>
+            <item>
+      <title>Episode 0 - Présentation</title>
+      <description>Présentation du podcast Radio'D, la radio de Daudet</description>
+      <link>https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode0-Presentation.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode0-Presentation.mp3" length="1383472" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode0-Presentation.mp3</guid>
+      <pubDate>Mon, 16 Mar 2026 08:00:00 +0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
-      <itunes:duration>23:50</itunes:duration>
+      <itunes:duration>1:21</itunes:duration>
     </item>
 
             <item>
@@ -48,7 +48,7 @@
       <link>https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode3-RencontreavecThierryLamy.mp3</link>
       <enclosure url="https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode3-RencontreavecThierryLamy.mp3" length="3742462" type="audio/mpeg"/>
       <guid>https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode3-RencontreavecThierryLamy.mp3</guid>
-      <pubDate>Wed, 25 Mar 2026 08:00:00 +0000</pubDate>
+      <pubDate>Thu, 19 Mar 2026 08:00:00 +0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>4:20</itunes:duration>
     </item>
