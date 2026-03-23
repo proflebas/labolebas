@@ -22,9 +22,9 @@
             <item>
       <title>Episode 0 - Présentation</title>
       <description>Présentation du podcast Radio'D, la radio de Daudet</description>
-      <link>https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode0-Presentation.mp3</link>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode0-Presentation.mp3" length="1383472" type="audio/mpeg"/>
-      <guid>https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode0-Presentation.mp3</guid>
+      <link>https://labolebas.com/RadioD/Episodes/2500-Presentation.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2500-Presentation.mp3" length="1383472" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2500-Presentation.mp3</guid>
       <pubDate>Mon, 16 Mar 2026 08:00:00 +0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>1:21</itunes:duration>
@@ -33,9 +33,9 @@
             <item>
       <title>Episode 1 - Silence on lit !</title>
       <description>Archive Février 26 - Radio'D revient sur Silence on lit !</description>
-      <link>https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode1-Silenceonlit.mp3</link>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode1-Silenceonlit.mp3" length="2164102" type="audio/mpeg"/>
-      <guid>https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode1-Silenceonlit.mp3</guid>
+      <link>https://labolebas.com/RadioD/Episodes/2501-SilenceOnLit.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2501-SilenceOnLit.mp3" length="2164102" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2501-SilenceOnLit.mp3</guid>
       <pubDate>Tue, 17 Mar 2026 08:00:00 +0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>2:29</itunes:duration>
@@ -44,9 +44,9 @@
             <item>
       <title>Episode 2 - Réception des correspondants italiens</title>
       <description>Aurore interviewe Mme Materazzi sur l'arrivée des correspondants italiens au collège</description>
-      <link>https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode2-CorrespondantsItaliens.mp3</link>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode2-CorrespondantsItaliens.mp3" length="5346664" type="audio/mpeg"/>
-      <guid>https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode2-CorrespondantsItaliens.mp3</guid>
+      <link>https://labolebas.com/RadioD/Episodes/2502-CorrespondantsItaliens.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2502-CorrespondantsItaliens.mp3" length="5346664" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2502-CorrespondantsItaliens.mp3</guid>
       <pubDate>Wed, 18 Mar 2026 08:00:00 +0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>5:56</itunes:duration>
@@ -56,13 +56,36 @@
             <item>
       <title>Episode 3 - Rencontre avec Thierry Lamy</title>
       <description>Des élèves de 6ème ont pu rencontrer Thierry Lamy, auteur de bandes dessinées, qui leur a parlé de son travail</description>
-      <link>https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode3-RencontreavecThierryLamy.mp3</link>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode3-RencontreavecThierryLamy.mp3" length="3742462" type="audio/mpeg"/>
-      <guid>https://labolebas.com/RadioD/Episodes/RadioD-Saison25-26-Episode3-RencontreavecThierryLamy.mp3</guid>
+      <link>https://labolebas.com/RadioD/Episodes/2503-RencontreavecThierryLamy.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2503-RencontreavecThierryLamy.mp3" length="3742462" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2503-RencontreavecThierryLamy.mp3</guid>
       <pubDate>Thu, 19 Mar 2026 08:00:00 +0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>4:20</itunes:duration>
     </item>
+
+            <item>
+      <title>Episode 4 - Préparation du voyage à Londres</title>
+      <description>Archive de février 26 - Les élèves décrivent le voyage qu'elles s'apprêtent à faire en Angleterre - Début d'un triptyque sur le voyage cette semaine</description>
+      <link>https://labolebas.com/RadioD/Episodes/2504-PreparationDuVoyageALondres.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/2504-PreparationDuVoyageALondres.mp3" length="5412184" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2504-PreparationDuVoyageALondres.mp3</guid>
+      <pubDate>Mon, 23 Mar 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>6:06</itunes:duration>
+    </item>
+
+<item>
+      <title>Episode 5 - Reportage en Angleterre</title>
+      <description>Pendant le voyage en Angleterre, les élèves ont enregistré leurs aventures avec un dictaphone. Voici leur son brut, sans montage. Attention, la fin est un peu abrupte. - Deuxième épisode du triptyque de la semaine sur ce voyage</description>
+      <link>https://labolebas.com/RadioD/Episodes/2505-DaudetALondres.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/2505-DaudetALondres.mp3" length="20590792" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2505-DaudetALondres.mp3</guid>
+      <pubDate>Tue, 24 Mar 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>23:42</itunes:duration>
+    </item>
+
 
   </channel>
 </rss>
