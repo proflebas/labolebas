@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Web – Labo Lebas</title>
+  <link rel="icon" href="../logos/favicon.png" type="image/png">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #003366, #0055aa);
+      color: white;
+      padding: 2rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      text-decoration: none;
+    }
+    header img.logo {
+      height: 60px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    a.header-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    section {
+      padding: 2rem;
+    }
+    .tile-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 1em;
+      justify-content: center;
+    }
+    .tile {
+      width: 220px;
+      height: 100px;
+      border-radius: 12px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      padding: 0.5rem;
+    }
+    .tile:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    .tile.template-chaine  { background: linear-gradient(135deg, #c0392b, #e74c3c); }
+    .tile.template-fiches  { background: linear-gradient(135deg, #1a1a2e, #16213e); }
+    .tile.template-cinema  { background: linear-gradient(135deg, #cc0000, #ff0000); }
+	.tile.template-couleurs        { background: linear-gradient(135deg, #8e44ad, #9b59b6); }
+    .tile.download { background-color: #3498db; }
+    .student1 { background-color: #8e44ad; }
+    .student2 { background-color: #c0392b; }
+    .student3 { background-color: #16a085; }
+    .student4 { background-color: #f39c12; }
+    .student5 { background-color: #2c3e50; }
+    .student6 { background-color: #2980b9; }
+
+    .subtitle {
+      font-size: 0.9rem;
+      font-weight: normal;
+      margin-top: 0.3rem;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="header-link">
+    <header>
+      <img src="logos/mascotte-labolebas.png" alt="Logo Labo Lebas" class="logo">
+      <h1>Jeux Scratch</h1>
+    </header>
+  </a>
+
+  <section>
+    <h2>Présentation</h2>
+    <p>Voici les jeux que les élèves ont réalisés eux-mêmes grâce à Scratch, en quelques heures. </br>
+    Pour la plupart c'est leur première création, et avec plus de temps ils auraient pu peaufiner leur jeu, que je trouve déjà très bon.
+    </p>
+
+    <div class="tile-container">
+      <a class="tile student1" href="Pages Scratch/Hakimi 2 - par Y.html" target="_blank">
+        Hakimi 2<br><span class="subtitle">par Y</span>
+      </a>
+      <a class="tile student2" href="Pages Scratch/Coeuraballon - par Rania.html" target="_blank">
+        Coeuraballon<br><span class="subtitle">par Rania</span>
+      </a>
+      <a class="tile student3" href="Pages Scratch/Goalie & Fraise - par Naomi.html" target="_blank">
+        Goalie & Fraise<br><span class="subtitle">par Naomi</span>
+      </a>
+      <a class="tile student4" href="Pages Scratch/Jeu du poussin - par Lana.html" target="_blank">
+        Jeu du poussin<br><span class="subtitle">par Lana</span>
+      </a>
+      <a class="tile student5" href="Pages Scratch/Le mangeur 2 Tacos - par Evan.html" target="_blank">
+        Le mangeur 2 tacos<br><span class="subtitle">par Evan</span>
+      </a>
+      
+    </div>
+  </section>
+
+  <footer>
+    Page réalisée par J. Lebas – Collège Alphonse Daudet d’Istres
+  </footer>
+</body>
+</html>
