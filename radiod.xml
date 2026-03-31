@@ -86,6 +86,28 @@
       <itunes:duration>23:42</itunes:duration>
     </item>
 
+<item>
+      <title>Episode 6 - Retour de Londres</title>
+      <description>Mme Allegre est interviewée par la team Radio'D et raconte comment s'est passé le voyage en Angleterre. - Troisième et dernier épisode du triptyque de la semaine sur ce voyage</description>
+      <link>https://labolebas.com/RadioD/Episodes/2506-RetourDeLondres.mp3</link>
+      <enclosure url="https://labolebas.com//Episodes/RadioD/2506-RetourDeLondres.mp3" length="13319800" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2506-RetourDeLondres.mp3</guid>
+      <pubDate>Fri, 27 Mar 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>15:10</itunes:duration>
+    </item>
+
+<item>
+      <title>Episode 7 - Eloquence</title>
+      <description>Alban, Edenn et Aurore nous présentent le concours d'éloquence</description>
+      <link>https://labolebas.com/RadioD/Episodes/2507-Eloquence.mp3</link>
+      <enclosure url="https://labolebas.com//Episodes/RadioD/2507-Eloquence.mp3" length="15 543 560 " type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2507-Eloquence.mp3</guid>
+      <pubDate>Mon, 30 Mar 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>6:12</itunes:duration>
+    </item>
+
 
   </channel>
 </rss>
