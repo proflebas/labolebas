@@ -108,6 +108,15 @@
       <itunes:duration>06:12</itunes:duration>
     </item>
 
-
+<item>
+      <title>Episode 8 - Conseil de classe</title>
+      <description>Les élèves de 4ème expliquent ce qu'est un conseil de classe et comment il se déroule</description>
+      <link>https://labolebas.com/RadioD/Episodes/2508-ConseilDeClasse.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2508-ConseilDeClasse.mp3" length="3347782 " type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2508-ConseilDeClasse.mp3</guid>
+      <pubDate>Mon, 06 Apr 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>03:45</itunes:duration>
+    </item>
   </channel>
 </rss>
