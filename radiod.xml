@@ -129,6 +129,17 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>03:17</itunes:duration>
     </item>    
-    
+
+<item>
+      <title>Episode 10 - Semaine de la santé 1/2</title>
+      <description>Les élèves de 4ème ont eu des interventions sur la santé toute la semaine. Emy et Elise témoignent, interviewées par Esther et Marly. Première des deux émissions sur le sujet.</description>
+      <link>https://labolebas.com/RadioD/Episodes/2510-SemaineSanté1.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2510-SemaineSanté1.mp3" length="4697302" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2510-SemaineSanté1.mp3</guid>
+      <pubDate>Mon, 20 Apr 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>05:21</itunes:duration>
+    </item>    
+        
   </channel>
 </rss>
