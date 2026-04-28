@@ -141,5 +141,17 @@
       <itunes:duration>05:21</itunes:duration>
     </item>    
         
+        <item>
+      <title>Episode 11 - Semaine de la santé 2/2</title>
+      <description>Les élèves de 4ème ont eu des interventions sur la santé toute la semaine. Aurore et Manon témoignent, interviewées par Marly et Mélyne. Deuxième des deux émissions sur le sujet.</description>
+      <link>https://labolebas.com/RadioD/Episodes/2511-SemaineSanté2.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2511-SemaineSanté2.mp3" length="4735654" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2511-SemaineSanté2.mp3</guid>
+      <pubDate>Mon, 27 Apr 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>05:24</itunes:duration>
+    </item>    
+        
+        
   </channel>
 </rss>
