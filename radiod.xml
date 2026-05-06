@@ -151,6 +151,17 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>05:24</itunes:duration>
     </item>    
+  
+         <item>
+      <title>Episode 12 - 6èmes Ambassadeurs</title>
+      <description>Quatre élèves de 6ème sont retournés dans leur ancienne école, Camille Pierron, pour raconter le collège et répondre aux questions des CM2. Anaïs et Mélyne interviewent Maïa et Ines</description>
+      <link>https://labolebas.com/RadioD/Episodes/2512 - Ambassadeurs à Camille Pierron.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2512 - Ambassadeurs à Camille Pierron.mp3" length="4627510" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2512 - Ambassadeurs à Camille Pierron.mp3</guid>
+      <pubDate>Mon, 04 May 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>05:17</itunes:duration>
+    </item>    
         
         
   </channel>
