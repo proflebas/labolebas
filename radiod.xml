@@ -175,5 +175,16 @@
       <itunes:duration>06:15</itunes:duration>
     </item>   
         
+         <item>
+      <title>Episode 14 - Spectacle de danse</title>
+      <description>Chloé et Tia, de la troupe de l'AS Hip Hop, racontent à Lina et Mélyne le spectacle qu'elles préparent</description>
+      <link>https://labolebas.com/RadioD/Episodes/2514-ASHipHop.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2514-ASHipHop.mp3" length="4627510" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2514-ASHipHop.mp3</guid>
+      <pubDate>Mon, 18 May 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>07:45</itunes:duration>
+    </item>   
+        
   </channel>
 </rss>
