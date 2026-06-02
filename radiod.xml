@@ -186,5 +186,16 @@
       <itunes:duration>07:45</itunes:duration>
     </item>   
         
+         <item>
+      <title>Episode 15 - Journée de résidence des CM2</title>
+      <description>Les CM2 de l'école Camille Pierron sont venus passer une journée en résidence au collège. Au programme : visite des lieux, découverte du CDI, initiation à l'informatique, atelier coeur en Italien, séance de découverte en Histoire Géographie, cours en immersion avec des classes de 6ème... et découverte de la webradio ! On en a profité pour faire enregistrer les premières impressions des élèves. Un grand merci à eux, et un grand merci à toute l'équipe de l'école : Dephine, Barbara, Julie et Géraldine !</description>
+      <link>https://labolebas.com/RadioD/Episodes/2515-CamillePierron.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2515-CamillePierron.mp3" length="5859718" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2515-CamillePierron.mp3</guid>
+      <pubDate>Mon, 25 May 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>06:39</itunes:duration>
+    </item>         
+        
   </channel>
 </rss>
