@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Web – Labo Lebas</title>
+  <link rel="icon" href="../logos/favicon.png" type="image/png">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #003366, #0055aa);
+      color: white;
+      padding: 2rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      text-decoration: none;
+    }
+    header img.logo {
+      height: 60px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    a.header-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    section {
+      padding: 2rem;
+    }
+    .tile-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 1em;
+      justify-content: center;
+    }
+    .tile {
+      width: 220px;
+      height: 100px;
+      border-radius: 12px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      padding: 0.5rem;
+    }
+    .tile:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    .tile.template-chaine  { background: linear-gradient(135deg, #c0392b, #e74c3c); }
+    .tile.template-fiches  { background: linear-gradient(135deg, #1a1a2e, #16213e); }
+    .tile.template-cinema  { background: linear-gradient(135deg, #cc0000, #ff0000); }
+	.tile.template-couleurs        { background: linear-gradient(135deg, #8e44ad, #9b59b6); }
+    .tile.download { background-color: #3498db; }
+    .student1 { background-color: #8e44ad; }
+    .student2 { background-color: #c0392b; }
+    .student3 { background-color: #16a085; }
+    .student4 { background-color: #f39c12; }
+    .student5 { background-color: #2c3e50; }
+    .student6 { background-color: #2980b9; }
+    .juliette26 { background-color: #7FFFD4; color:#00B8B8; }
+    .matthis26 { background-color: #6B1E9C; color:#00FFFF; }
+    .marwa26 { background-color: #F9C8C8; color:#FF6B6B; }    
+    .ambre26 { background-color: #FFB87A; color:#000000; }
+    .isshak26 { background-color: #000; color:#FF0000; }
+    .victoria26 { background-color: #B22222; color:#C0C0C0; }
+        
+    .subtitle {
+      font-size: 0.9rem;
+      font-weight: normal;
+      margin-top: 0.3rem;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="header-link">
+    <header>
+      <img src="logos/mascotte-labolebas.png" alt="Logo Labo Lebas" class="logo">
+      <h1>Atelier Web</h1>
+    </header>
+  </a>
+
+
+
+<section>
+    <h2>Sites pour aider Camille à réviser son bac</h2>
+    <p>Camille est trop forte mais elle refuse de l'admettre. Voilà de quoi l'entraîner :</p>
+    <div class="tile-container">
+      <a class="tile juliette26" href="https://coopmaths.fr/alea/?uuid=12afd&id=1AL13-2&n=1&d=10&s=3&cd=1&tip=0&uuid=33e54&id=1AL13-1&v=eleve&es=11110011&title=Suites%2520Camille" target="_blank">
+        Suites
+      </a>
+      
+  </section>
+
+  <footer>
+    Page réalisée par J. Lebas – Collège Alphonse Daudet d’Istres
+  </footer>
+</body>
+</html>
