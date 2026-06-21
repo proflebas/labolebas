@@ -108,6 +108,9 @@
         .accordion.cat-mesures { background: linear-gradient(135deg, #43a047, #81c784); }
         .accordion.cat-mesures:hover { filter: brightness(1.05); }
 
+        .accordion.cat-info { background: linear-gradient(135deg, #ffd824, #f3e5ab); }
+        .accordion.cat-mesures:hover { filter: brightness(1.05); }
+        
         .panel {
           padding: 0 1rem; display: none; background-color: white; overflow: hidden;
           border-left: 4px solid #ccc; /* neutre */
@@ -227,6 +230,11 @@
       border-left: 4px solid #81c784;
     }
 
+    .cat-mesures + .panel .sub-accordion {
+      background: linear-gradient(135deg, #e5f5e9, #f0faf2); /* vert clair */
+      border-left: 4px solid #81c784;
+    }
+
     /* Effet survol plus soutenu */
     .panel .sub-accordion:hover {
       filter: brightness(0.98);
@@ -246,6 +254,10 @@
 
     .cat-mesures + .panel .sub-panel {
       border-left-color: #81c784; /* vert */
+    }
+    
+      .cat-info + .panel .sub-panel {
+      border-left-color: #81c784; /* jaune */
     }
         footer {
           background: #003366; color: white; text-align: center; padding: 1rem; margin-top: 3rem;
@@ -575,8 +587,26 @@
     <button class="sub-accordion">M4 – Volumes</button>
     <div class="sub-panel"></div>
   </div>
+  
+  <button class="accordion cat-info">Informatique</button>
+  <div class="panel">
+    <button class="sub-accordion">Liens</button>
+    <div class="sub-panel">
+      <ul class="doc-links">
+    <li><a href="Documents/6M1 - Longueurs.pdf" target="_blank" class="cours">Cours</a></li>
+    <li><a href="Documents/6M1 - Sujet blanc.pdf" target="_blank" class="sujet">Sujet blanc</a></li>
+    <li><a href="https://www.logicieleducatif.fr/jeu/conversions-mesures-longueurs" target="_blank" class="jeu">Jeu</a></li>
+  </ul>
+
+    </div>
+
+  </div>
+  
+  
 </section>
 </section>
+
+
 
 <section id="5e">
   <h2>Ressources 5e</h2>

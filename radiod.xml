@@ -196,6 +196,15 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>06:39</itunes:duration>
     </item>         
-        
+               <item>
+      <title>Episode 16 - Chorale du collège</title>
+      <description>Aurore et Manon reviennent sur le concert de fin d'année de l'option Chorale du collège, pilotée par Mme Canonge</description>
+      <link>https://labolebas.com/RadioD/Episodes/2516-Chorale.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2516-Chorale.mp3" length="3739558" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2516-Chorale.mp3</guid>
+      <pubDate>Mon, 01 Jun 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>04:11</itunes:duration>
+    </item>      
   </channel>
 </rss>
