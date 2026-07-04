@@ -187,7 +187,7 @@
     </item>   
         
          <item>
-      <title>Episode 15 - Journée de résidence des CM2</title>
+      <title>Episode 15 - Journée de résidence de Camille Pierron</title>
       <description>Les CM2 de l'école Camille Pierron sont venus passer une journée en résidence au collège. Au programme : visite des lieux, découverte du CDI, initiation à l'informatique, atelier coeur en Italien, séance de découverte en Histoire Géographie, cours en immersion avec des classes de 6ème... et découverte de la webradio ! On en a profité pour faire enregistrer les premières impressions des élèves. Un grand merci à eux, et un grand merci à toute l'équipe de l'école : Dephine, Barbara, Julie et Géraldine !</description>
       <link>https://labolebas.com/RadioD/Episodes/2515-CamillePierron.mp3</link>
       <enclosure url="https://labolebas.com/RadioD/Episodes/2515-CamillePierron.mp3" length="5859718" type="audio/mpeg"/>
@@ -205,6 +205,62 @@
       <pubDate>Mon, 01 Jun 2026 08:00:00 +0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>04:11</itunes:duration>
+    </item>  
+    
+               <item>
+      <title>Episode 17 - Voyage en Ardèche</title>
+      <description>L'équipe d'EPS du collège a amené les élèves de 5ème de l'AS profiter d'un voyage en Ardèche. Programme très sportif et déconnexion des écrans !</description>
+      <link>https://labolebas.com/RadioD/Episodes/2517-VoyageArdeche.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2517-VoyageArdeche.mp3" length="4100470" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2517-VoyageArdeche.mp3</guid>
+      <pubDate>Mon, 08 Jun 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>04:40</itunes:duration>
     </item>      
+    
+                   <item>
+      <title>Episode 18 - Unplugged</title>
+      <description>Quatre classes de 6ème ont bénéficié du programme Unplugged, qui travaille sur les Compétences Psycho-Sociales pour lutter contre les addictions. Maloa et Abygail reviennent dessus six mois plus tard, au moment de la remise des diplômes.</description>
+      <link>https://labolebas.com/RadioD/Episodes/2518-Unplugged.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2518-Unplugged.mp3" length="5133766" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2518-Unplugged.mp3</guid>
+      <pubDate>Mon, 15 Jun 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>05:53</itunes:duration>
+    </item>  
+    
+                   <item>
+      <title>Episode 19 - Résidence de l'école Jean Rostand</title>
+      <description>Les élèves de CM2 de l'école Jean Rostand sont à leur tour venus passer une journée en immersion dans le collège. Ils témoignent de leurs premières impressions dans une émission enregistrée dès le matin.</description>
+      <link>https://labolebas.com/RadioD/Episodes/2519-Rostand.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2519-Rostand.mp3" length="4600726" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2519-Rostand.mp3</guid>
+      <pubDate>Mon, 22 Jun 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>05:21</itunes:duration>
+    </item>  
+    
+                   <item>
+      <title>Episode 20 - Planètes</title>
+      <description>Les élèves de 6ème qui n'avaient pas pu bénéficier d'une sortie cinéma dans l'année ont pu voir le film Planètes de Momoko Seto. Maloa et Abygail n'ont pas été pleinement convaincues par l'expérience.</description>
+      <link>https://labolebas.com/RadioD/Episodes/2520-Planetes.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2520-Planetes.mp3" length="6287782" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2520-Planetes.mp3</guid>
+      <pubDate>Mon, 29 Jun 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>07:11</itunes:duration>
+    </item>  
+        
+    <!--                   <item>
+      <title>Episode 21 - Annonces des épisodes d'été</title>
+      <description>Cet été, Radio'D va continuer de publier régulièrement des épisodes, comme tout au long de l'année. Chaque lundi, retrouvez ici une recommandation culturelle (livre, film) ou un épisode inédit qui aura été enregistré au cours de l'année dans des conditions normales, mais que nous n'avons pas pu publier au moment où il faisait l'actualité. On se retrouve à la rentrée, avec une nouvelle équipe, composée d'anciens et de nouveaux, et de nouveaux épisodes à vous proposer. Bonnes vacances à tous !</description>
+      <link>https://labolebas.com/RadioD/Episodes/2521-Annonceete2026.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2521-Annonceete2026.mp3" length="3739558" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2521-Annonceete2026.mp3</guid>
+      <pubDate>Mon, 06 Jun 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>04:11</itunes:duration>
+    </item>  
+        -->
   </channel>
 </rss>
