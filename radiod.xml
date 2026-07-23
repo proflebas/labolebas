@@ -251,16 +251,49 @@
       <itunes:duration>07:11</itunes:duration>
     </item>  
         
-    <!--                   <item>
+<item>
       <title>Episode 21 - Annonces des épisodes d'été</title>
       <description>Cet été, Radio'D va continuer de publier régulièrement des épisodes, comme tout au long de l'année. Chaque lundi, retrouvez ici une recommandation culturelle (livre, film) ou un épisode inédit qui aura été enregistré au cours de l'année dans des conditions normales, mais que nous n'avons pas pu publier au moment où il faisait l'actualité. On se retrouve à la rentrée, avec une nouvelle équipe, composée d'anciens et de nouveaux, et de nouveaux épisodes à vous proposer. Bonnes vacances à tous !</description>
       <link>https://labolebas.com/RadioD/Episodes/2521-Annonceete2026.mp3</link>
       <enclosure url="https://labolebas.com/RadioD/Episodes/2521-Annonceete2026.mp3" length="3739558" type="audio/mpeg"/>
       <guid>https://labolebas.com/RadioD/Episodes/2521-Annonceete2026.mp3</guid>
-      <pubDate>Mon, 06 Jun 2026 08:00:00 +0000</pubDate>
+      <pubDate>Mon, 05 Jul 2026 08:00:00 +0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>04:11</itunes:duration>
-    </item>  
-        -->
+</item>  
+
+<item>
+      <title>Episode 22 - RecoDaudet - Fruit Basket</title>
+      <description>Esther nous conseille le manga Fruit Basket</description>
+      <link>https://labolebas.com/RadioD/Episodes/2522-RecoDaudet-FruitBasket.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2522-RecoDaudet-FruitBasket.mp3" length="1716070" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2522-RecoDaudet-FruitBasket.mp3</guid>
+      <pubDate>Mon, 06 Jul 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>01:54</itunes:duration>
+</item>  
+
+<item>
+      <title>Episode 23 - Archive - Proxima</title>
+      <description>Manon et Aurore nous racontent Proxima, qu'elles ont vu avec Collège au Cinéma</description>
+      <link>https://labolebas.com/RadioD/Episodes/2523-Archive-Proxima.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2523-Archive-Proxima.mp3" length="4625878" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2523-Archive-Proxima.mp3</guid>
+      <pubDate>Mon, 13 Jul 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>05:12</itunes:duration>
+</item> 
+
+<item>
+      <title>Episode 22 - RecoDaudet - Les Sisters</title>
+      <description>Abigaïl et Maloa nous conseillent les Sisters</description>
+      <link>https://labolebas.com/RadioD/Episodes/2524-RecoDaudet-LesSisters.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2524-RecoDaudet-LesSisters.mp3" length="1900630" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2524-RecoDaudet-LesSisters.mp3</guid>
+      <pubDate>Mon, 20 Jul 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>02:07</itunes:duration>
+</item>  
+        
   </channel>
 </rss>
