@@ -285,7 +285,7 @@
 </item> 
 
 <item>
-      <title>Episode 22 - RecoDaudet - Les Sisters</title>
+      <title>Episode 24 - RecoDaudet - Les Sisters</title>
       <description>Abigaïl et Maloa nous conseillent les Sisters</description>
       <link>https://labolebas.com/RadioD/Episodes/2524-RecoDaudet-LesSisters.mp3</link>
       <enclosure url="https://labolebas.com/RadioD/Episodes/2524-RecoDaudet-LesSisters.mp3" length="1900630" type="audio/mpeg"/>
@@ -294,6 +294,19 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>02:07</itunes:duration>
 </item>  
+     
+<item>
+      <title>Episode 25 - Archives - Vaillant</title>
+      <description>Les CM2 de l'école Vaillant sont venus en résidence le temps d'une journée en juin. Voici leurs témoignages</description>
+      <link>https://labolebas.com/RadioD/Episodes/2525-Archive-Vaillant.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2525-Archive-Vaillant.mp3" length="10822822" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2525-Archive-Vaillant.mp3</guid>
+      <pubDate>Mon, 27 Jul 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>12:40</itunes:duration>
+</item>  
+          
+     
         
   </channel>
 </rss>
