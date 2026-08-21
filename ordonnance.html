@@ -134,8 +134,13 @@ h1 em{font-style:italic;color:var(--gold)}
 .slip:hover{box-shadow:0 12px 28px -16px rgba(58,42,32,.4);transform:translateY(-1px)}
 .slip-title{
   font-family:'Fraunces',serif;font-weight:600;font-size:1.28rem;
-  color:var(--cocoa);line-height:1.2;padding-right:34px;
+  color:var(--cocoa);line-height:1.2;
 }
+.slip-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.slip-level{font-size:1.05rem;white-space:nowrap;flex-shrink:0;line-height:1.4}
+.slip-location{font-size:.92rem;color:var(--cocoa);background:var(--sage-mist);border-left:4px solid var(--sage);padding:8px 12px;border-radius:6px;margin-bottom:12px}
+.slip-location strong{color:var(--sage-deep)}
+.hint{margin-top:22px;padding:14px 18px;background:var(--paper);border:1.5px dashed var(--gold);border-radius:10px;color:var(--cocoa);font-weight:600;text-align:center}
 .slip-author{color:var(--cocoa-soft);font-size:.98rem;margin:2px 0 14px;font-style:italic}
 .slip-themes{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
 .t-hit{
@@ -202,6 +207,8 @@ footer{
   <div class="section-label">Sélectionne tes thèmes favoris&nbsp;:</div>
   <div class="chips" id="chips"></div>
 
+  <p class="hint" id="hint" style="display:none"></p>
+
   <div class="results" id="results" style="display:none">
     <div class="results-head">
       <h2>📖 Tes ordonnances littéraires</h2>
@@ -214,19 +221,125 @@ footer{
 </div>
 
 <script>
-const books=[
- {title:"Cher inconnu",author:"Berlie Doherty",themes:["Secret","Confidences","Adolescence","Correspondance","Amour"]},
- {title:"Faux raccord",author:"Frank Andriat",themes:["Amour","Adolescence","Tristesse","Rupture","Famille"]},
- {title:"Juste une fille",author:"Élise Giraudeau",themes:["Harcèlement","Premier amour","Acceptation de soi","Maladie","Famille"]},
- {title:"La maison aux roses immortelles",author:"Clémence Forest",themes:["Fantastique","Secret","Famille","Tristesse","Deuil"]},
- {title:"Pablo dans les bois",author:"Myren Duval",themes:["Maladie","Famille","Adolescence","Amitié","Premier amour"]},
- {title:"Sans moi",author:"Raphaèle Frier",themes:["Rupture","Famille","Premier amour","Adolescence","Secret"]},
- {title:"Autobiographie d'une courgette",author:"Gilles Paris",themes:["Famille","Humour","Amour","Deuil","Confidences"]},
- {title:"Danser sous l'orage",author:"Mademoiselle Fantazia",themes:["Acceptation de soi","Amitié","Adolescence"]},
- {title:"Les vies d'Avril",author:"Claire Cantais",themes:["Mensonges","Secret","Famille","Acceptation de soi","Amitié"]},
- {title:"Le garçon qui parlait avec les mains",author:"Sarah Cohen-Scali",themes:["Amitié","Harcèlement","Différence","Adolescence"]},
+const books = [
+{title:"Oh boy", author:"Marie-Aude Murail", themes:["Famille","Deuil","Humour","Solidarité","Maladie"], level:"⭐⭐❤️", location:"Dire l'amour - Famille"},
+
+{title: "17 millimètres", author: "Florence Médina", themes: ["Sexualité", "Crise d'adolescence", "Amitié", "Confiance en soi", "Conflits"], level: "⭐⭐", location: "Dire l'amour - Sexualité et grossesse"},
+{title: "35 kilos d'espoir", author: "Anna Gavalda", themes: ["Collège/lycée", "Confiance en soi", "Secret", "Courage"], level: "⭐", location: "Acceptation de soi"},
+{title: "A comme aujourd'hui", author: "David Levithan", themes: ["Amitié", "Secret", "Crise d'adolescence", "Conflits", "Fantastique / Fantasy", "Sexualité", "Confiance en soi"], level: "⭐⭐❤️", location: "Acceptation de soi"},
+{title: "A copier cent fois", author: "Antoine Dole", themes: ["Collège/lycée", "LGBT", "Famille", "Harcèlement"], level: "⭐❤️", location: "Non au harcèlement"},
+{title: "A poings fermés", author: "Amélie Antoine", themes: ["Famille", "Suspense", "Courage", "Fantastique / Fantasy", "Collège/lycée", "Conflits", "Crise d'adolescence"], level: "⭐⭐❤️", location: "Récits fantastiques"},
+{title: "A(ni)mal", author: "Cécile Alix", themes: ["Réfugiés", "Courage", "Entraide", "Amitié", "Maladie / Handicap"], level: "⭐⭐❤️", location: "Fictions inspirées d'histoires vraies - Réfugiés et migrants"},
+{title: "Amours ardentes", author: "Juliette Adam", themes: ["Amour passion", "Conflits", "Crise d'adolescence", "Rupture", "Tristesse"], level: "⭐⭐⭐", location: "Dire l'amour - En couple"},
+{title: "Anse rouge", author: "Sandrine Caillis", themes: ["Relation toxique", "Secret", "Confiance en soi", "Courage", "Tristesse"], level: "⭐⭐❤️💣", location: "Acceptation de soi"},
+{title: "Appel en absence", author: "Cathy Ytak", themes: ["Amitié", "Suspense", "Confiance en soi", "Confidences"], level: "⭐🔊👍", location: "Amitiés inoubliables"},
+{title: "Aristote et Dante découvrent les secrets de l'univers", author: "Benjamin Alire Sáenz", themes: ["Amitié", "Confiance en soi", "Amour passion", "Collège/lycée", "Premier amour", "Harcèlement"], level: "⭐⭐", location: "Médiathèque"},
+{title: "Au bonheur des dames", author: "Emile Zola", themes: ["Amour passion", "Secret"], level: "⭐⭐⭐", location: "Médiathèque"},
+{title: "Au clair de la Louna", author: "Kochka", themes: ["Maladie / Handicap", "Confiance en soi", "Famille", "Secret"], level: "⭐❤️", location: "Dire l'amour - Famille"},
+{title: "Aujourd'hui est un autre jour", author: "David Levithan", themes: ["Amitié", "Crise d'adolescence", "Secret", "Courage", "Premier amour", "Conflits"], level: "⭐⭐❤️", location: "Amitiés inoubliables"},
+{title: "Brexit romance", author: "Clémentine Beauvais", themes: ["Amour passion", "Secret", "Courage"], level: "⭐⭐", location: "Bibliothèque de classe"},
+{title: "Challenge Chicken Wings", author: "Jean-Christophe Tixier", themes: ["Humour", "Amitié", "Amour passion"], level: "⭐⭐", location: "Acceptation de soi"},
+{title: "Cher inconnu", author: "Berlie Doherty", themes: ["Amitié", "Secret", "Sexualité", "Confidences", "Crise d'adolescence", "Conflits"], level: "⭐⭐", location: "Dire l'amour - Sexualité et grossesse"},
+{title: "Comme un homme", author: "Florence Hinckel", themes: ["Famille", "Secret", "Courage"], level: "⭐🔊", location: "Acceptation de soi"},
+{title: "Corps de fille", author: "Marie Lenne-Fouquet", themes: ["Égalité filles-garçons", "Confiance en soi", "Secret", "Courage"], level: "⭐", location: "Lutter contre les stéréotypes"},
+{title: "Cosette : Une enfance malheureuse (extraits)", author: "Victor Hugo", themes: ["Amour passion", "Entraide", "Secret", "Courage"], level: "⭐⭐", location: "Dénoncer les travers de la société - Pauvreté et misère"},
+{title: "Cyrano de Bergerac", author: "Edmond Rostand", themes: ["Courage", "Amour passion", "Secret"], level: "⭐⭐⭐", location: "Dire l'amour - Couple"},
+{title: "Dans la mer il y a des crocodiles", author: "Fabio Geda", themes: ["Réfugiés", "Amitié", "Secret", "Courage"], level: "⭐⭐❤️", location: "Fictions inspirées d'histoires vraies - Réfugiés et migrants"},
+{title: "De Sacha à Macha", author: "Rachel Hausfater et Yaël Hassan", themes: ["Amitié", "Confidences", "Secret", "Courage"], level: "⭐⭐", location: "Amitiés inoubliables"},
+{title: "Des barreaux plein les yeux", author: "Marc Cantin", themes: ["Secret", "Courage"], level: "⭐", location: "Dire l'amour - Couple"},
+{title: "Des souris et des hommes", author: "John Steinbeck", themes: ["Maladie / Handicap", "Amitié", "Secret", "Harcèlement"], level: "⭐⭐⭐❤️", location: "Amitiés inoubliables"},
+{title: "Deux petits pas sur le sable mouillé", author: "Anne-Dauphine Julliand", themes: ["Famille", "Deuil", "Maladie / Handicap", "Secret", "Tristesse"], level: "⭐⭐⭐💣", location: "Acceptation de soi"},
+{title: "Devine quoi ?", author: "Michael Ollivier", themes: ["Confiance en soi", "Secret"], level: "⭐", location: "Acceptation de soi"},
+{title: "Dédée / Un jardin pour maman", author: "Claire Beuve", themes: ["Famille", "Secret", "Courage"], level: "⭐⭐", location: "Bibliothèque de classe"},
+{title: "En couple", author: "Coline Pierré", themes: ["Crise d'adolescence", "Égalité filles-garçons", "Amour passion", "Secret", "Conflits"], level: "⭐⭐", location: "Dire l'amour - Couple"},
+{title: "Ensemble, c'est tout", author: "Anna Gavalda", themes: ["Amitié", "Entraide", "Amour passion", "Secret"], level: "⭐⭐⭐", location: "Mieux vivre ensemble"},
+{title: "Entre chiens et loups tome 1", author: "Malorie Blackman", themes: ["Amour passion", "Secret", "Courage", "Fantastique / Fantasy"], level: "⭐⭐", location: "Dénoncer les travers de la société - Pauvreté et misère"},
+{title: "Erêves", author: "Stéphane Servant", themes: ["Deuil", "Confiance en soi", "Courage", "Tristesse"], level: "⭐⭐❤️", location: "Dire l'amour - Famille"},
+{title: "Et si c'était vrai...", author: "Marc Levy", themes: ["Amour passion", "Secret", "Courage"], level: "⭐⭐", location: "Dire l'amour - Couple"},
+{title: "Fantomatique Road Trip", author: "Mathilde Payen", themes: ["Humour", "Courage", "Deuil", "Tristesse"], level: "⭐⭐❤️", location: "Amitiés inoubliables"},
+{title: "Faux raccord", author: "Frank Andriat", themes: ["Amour passion", "Crise d'adolescence", "Sexualité", "Tristesse", "Rupture", "Conflits"], level: "⭐⭐❤️", location: "Dire l'amour - Sexualité et grossesse"},
+{title: "Frères d'exil", author: "Kochka", themes: ["Famille", "Réfugiés", "Entraide", "Secret"], level: "⭐❤️", location: "Fictions inspirées d'histoires vraies - Réfugiés et migrants"},
+{title: "Frères de sang", author: "Mikaël Ollivier", themes: ["Enquête", "Entraide", "Famille", "Secret"], level: "⭐⭐", location: "Amitiés inoubliables"},
+{title: "Fêlures bleues", author: "Jérôme Leroy", themes: ["Amitié", "Secret", "Science-fiction", "Courage"], level: "⭐⭐❤️", location: "Dystopies"},
+{title: "George", author: "Alex Gino", themes: ["Égalité filles-garçons", "Transidentité", "Secret", "Courage"], level: "⭐⭐", location: "Mieux vivre ensemble"},
+{title: "Graff'in love", author: "Le Gendre", themes: ["Amitié", "Crise d'adolescence", "Amour passion", "Premier amour", "Conflits"], level: "⭐⭐", location: "Médiathèque"},
+{title: "It", author: "Catherine Grive", themes: ["Confiance en soi", "Secret", "Courage", "Transidentité"], level: "⭐⭐", location: "Mieux vivre ensemble"},
+{title: "Je ne sais plus pourquoi je t'aime", author: "Zevin", themes: ["Crise d'adolescence", "Amour passion", "Conflits", "Premier amour"], level: "⭐⭐", location: "Dire l'amour - Couple"},
+{title: "Je ne voulais pas vous faire pleurer", author: "Charlotte Monnier", themes: ["Maladie / Handicap", "Confiance en soi", "Secret", "Tristesse"], level: "⭐", location: "Acceptation de soi"},
+{title: "Juste une fille", author: "Elise Giraudau", themes: ["Harcèlement", "Premier amour", "Confiance en soi", "Maladie / Handicap", "Famille", "Amitié", "Secret", "Égalité filles-garçons"], level: "⭐⭐⭐", location: "Bibliothèque de classe"},
+{title: "L'île des esclaves", author: "Marivaux", themes: ["Amour passion", "Secret", "Courage"], level: "⭐⭐⭐", location: "Dire l'amour - Couple"},
+{title: "La Cabane", author: "Ludovic Lecomte", themes: ["Maladie / Handicap", "Famille", "Courage", "Confidences", "Tristesse"], level: "⭐❤️", location: "Acceptation de soi"},
+{title: "La Coloc'", author: "Manu Causse", themes: ["Humour", "Amour passion", "Secret", "Premier amour", "Amitié", "Conflits", "Jalousie"], level: "⭐⭐❤️", location: "Amitiés inoubliables"},
+{title: "La Comtesse de Khara", author: "Emily Varga", themes: ["Courage", "Secret", "Amour passion"], level: "⭐⭐", location: "Bibliothèque de classe"},
+{title: "La Face cachée de Margo", author: "John Green", themes: ["Amitié", "Amour passion", "Secret"], level: "⭐⭐", location: "Acceptation de soi"},
+{title: "La fille de 3e B", author: "Christian Grenier", themes: ["Musique", "Secret", "Amour passion", "Crise d'adolescence", "Conflits", "Premier amour"], level: "⭐⭐", location: "Dire l'amour - Couple"},
+{title: "La Fourmi rouge", author: "Fred Bernard", themes: ["Crise d'adolescence", "Amitié", "Secret", "Courage", "Conflits"], level: "⭐", location: "Acceptation de soi"},
+{title: "La maison aux roses immortelles", author: "Clémence Forest", themes: ["Fantastique / Fantasy", "Secret", "Famille", "Tristesse", "Deuil", "Enquête"], level: "⭐⭐", location: "Bibliothèque de classe"},
+{title: "La Mécanique du cœur", author: "Mathias Malzieu", themes: ["Amour passion", "Rupture", "Premier amour", "Tristesse"], level: "⭐⭐", location: "Dire l'amour - Couple"},
+{title: "La Plus belle des magies", author: "Abubakar Oduola", themes: ["Crise d'adolescence", "Confiance en soi", "Secret", "Courage", "Conflits"], level: "⭐⭐", location: "Acceptation de soi"},
+{title: "La Team", author: "Carole Tremblay", themes: ["Crise d'adolescence", "Entraide", "Secret", "Conflits"], level: "⭐⭐", location: "Amitiés inoubliables"},
+{title: "La vie dure trois minutes", author: "Agnès Laroche", themes: ["Maladie / Handicap", "Deuil", "Secret", "Tristesse", "Conflits", "Crise d'adolescence"], level: "⭐⭐⭐", location: "Dire l'amour - En famille"},
+{title: "La Vie en Turquoise", author: "Hubert Ben Kemoun", themes: ["Maladie / Handicap", "Famille", "Deuil", "Secret", "Tristesse"], level: "⭐⭐⭐", location: "Dire l'amour - En famille"},
+{title: "Le Ciel de Joy", author: "Luce Guilbaud", themes: ["Crise d'adolescence", "Amour passion", "Secret", "Conflits", "Premier amour", "Sexualité"], level: "⭐⭐", location: "Dire l'amour - Sexualité et grossesse"},
+{title: "Le Mec parfait n'existe pas", author: "Sophie Gonzales", themes: ["LGBT", "Amour passion", "Crise d'adolescence", "Secret", "Conflits"], level: "⭐⭐", location: "Mieux vivre ensemble"},
+{title: "Le Passeur", author: "Lois Lowry", themes: ["Famille", "Science-fiction", "Secret"], level: "⭐⭐", location: "Science-fiction"},
+{title: "Le Si gentil monsieur Henry", author: "Clotilde Bernos", themes: ["Secret", "Courage", "Entraide", "Harcèlement"], level: "⭐", location: "Non au harcèlement"},
+{title: "Le Silence de la mer", author: "Vercors", themes: ["Guerre", "Amour passion", "Secret", "Courage"], level: "⭐⭐", location: "Fictions inspirées d'histoires vraies - Dire la guerre"},
+{title: "Le Silence est à nous", author: "Coline Pierré", themes: ["Entraide", "Secret", "Courage", "Harcèlement", "Égalité filles-garçons", "Transidentité"], level: "⭐⭐", location: "Lutter contre les stéréotypes"},
+{title: "Le Syndrome du spaghetti", author: "Marie Vareille", themes: ["Amitié", "Crise d'adolescence", "Secret", "Courage", "Premier amour", "Conflits"], level: "⭐⭐", location: "Bibliothèque de classe"},
+{title: "Le Temps des miracles", author: "Anne-Laure Bondoux", themes: ["Réfugiés", "Amour passion", "Secret", "Courage"], level: "⭐⭐❤️", location: "Fictions inspirées d'histoires vraies - Réfugiés et migrants"},
+{title: "Les Misérables", author: "Victor Hugo", themes: ["Amour passion", "Entraide", "Secret", "Courage"], level: "⭐⭐⭐❤️🔊", location: "Dénoncer les travers de la société - Pauvreté et misère"},
+{title: "Les Misérables (extraits)", author: "Victor Hugo", themes: ["Amour passion", "Secret", "Courage"], level: "⭐⭐", location: "Récits réalistes"},
+{title: "Lettres à une disparue", author: "Véronique Massenot", themes: ["Guerre", "Confidences", "Deuil", "Secret", "Tristesse"], level: "⭐", location: "Dire l'amour - Famille"},
+{title: "Moi Simon 16 ans Homo Sapiens", author: "Becky Albertalli", themes: ["Secret", "LGBT", "Collège/lycée", "Amour passion", "Premier amour", "Harcèlement"], level: "⭐⭐", location: "Mieux vivre ensemble"},
+{title: "Ne vois-tu rien venir ?", author: "Amélie Antoine", themes: ["Amitié", "Tristesse", "Secret", "Courage"], level: "⭐⭐❤️", location: "Vie au collège"},
+{title: "Ni Prince ni charmant", author: "Florence Médina", themes: ["Amour passion", "Crise d'adolescence", "Secret", "Courage", "Conflits", "Harcèlement", "Égalité filles-garçons"], level: "⭐ ❤️", location: "Lutter contre les stéréotypes"},
+{title: "No et Moi", author: "Delphine de Vigan", themes: ["Amitié", "Entraide", "Secret", "Courage"], level: "⭐", location: "Récits réalistes"},
+{title: "No Kids", author: "Julie Rey", themes: ["Sexualité", "Secret", "Courage", "Premier amour"], level: "⭐⭐🔊", location: "Dire l'amour - Sexualité et grossesse"},
+{title: "Nos constellations", author: "Florence Quentin", themes: ["Amour passion", "Secret", "Courage", "Sexualité", "Deuil"], level: "⭐⭐", location: "Dire l'amour - Sexualité et grossesse"},
+{title: "Nos cœurs aidants", author: "Celia Samba", themes: ["Amour passion", "Rupture", "Courage", "Maladie / Handicap", "Tristesse"], level: "⭐⭐", location: "Acceptation de soi"},
+{title: "Nos destins infinis", author: "Laura Steven", themes: ["Amour passion", "Secret", "Courage", "Premier amour"], level: "⭐⭐", location: "Fantasy"},
+{title: "Nos étoiles contraires", author: "John Green", themes: ["Maladie / Handicap", "Deuil", "Amour passion", "Tristesse"], level: "⭐⭐❤️", location: "Dire l'amour - Couple"},
+{title: "Notre-Dame de Paris", author: "Victor Hugo", themes: ["Amour passion", "Secret", "Courage"], level: "⭐⭐⭐", location: "En ville"},
+{title: "Nous traverserons des orages", author: "Anne-Laure Bondoux", themes: ["Famille", "Secret", "Courage"], level: "⭐⭐⭐", location: "Dire l'amour - Famille"},
+{title: "Oscar et la dame rose", author: "Eric-Emmanuel Schmidt", themes: ["Maladie / Handicap", "Amitié", "Humour", "Secret"], level: "⭐❤️", location: "Acceptation de soi"},
+{title: "Outrage useusement romantique", author: "Manu Causse", themes: ["Amour passion", "Secret", "Courage"], level: "⭐⭐", location: "Dire l'amour - Couple"},
+{title: "Pas tout à fait moi", author: "Delphine Bertholon", themes: ["Deuil", "Famille", "Fantastique / Fantasy", "Enquête", "Tristesse"], level: "⭐", location: "Récits fantastiques"},
+{title: "Pensée assise", author: "Mathieu Robin", themes: ["Courage", "Maladie / Handicap", "Amour passion", "Crise d'adolescence", "Conflits"], level: "⭐❤️", location: "Acceptation de soi"},
+{title: "Petites reines", author: "Clémentine Beauvais", themes: ["Amitié", "Égalité filles-garçons", "Courage", "Humour"], level: "⭐⭐", location: "Non au harcèlement"},
+{title: "Pourquoi ça fait mal ?", author: "Hausfater", themes: ["Jalousie", "Amour passion", "Secret"], level: "⭐⭐", location: "Dire l'amour - Couple"},
+{title: "Premier chagrin", author: "Eva Kavian", themes: ["Rupture", "Amour passion", "Premier amour", "Tristesse"], level: "⭐⭐", location: "Dire l'amour - Couple"},
+{title: "Promise", author: "Ally Condie", themes: ["Secret", "Science-fiction", "Amour passion", "Courage"], level: "⭐⭐", location: "Science-fiction"},
+{title: "Quelques secondes encore", author: "Thomas Scotto", themes: ["Maladie / Handicap", "Deuil", "Courage", "Tristesse", "Famille"], level: "⭐🔊❤️", location: "Dire l'amour - Famille"},
+{title: "Qui es-tu Alaska ?", author: "John Green", themes: ["Amitié", "Deuil", "Secret", "Tristesse"], level: "⭐⭐", location: "Acceptation de soi"},
+{title: "Roméo @ Juliette", author: "Causse", themes: ["Amour passion", "Secret", "Humour"], level: "⭐⭐", location: "Dire l'amour - Couple"},
+{title: "Rose et Massimo", author: "Félix Radu", themes: ["Humour", "Amour passion", "Secret"], level: "⭐⭐❤️", location: "Dire l'amour - Couple"},
+{title: "Sans moi", author: "Raphaèle Frier", themes: ["Sexualité", "Rupture", "Conflits", "Famille", "Premier amour", "Crise d'adolescence", "Tristesse"], level: "⭐", location: "Dire l'amour - Sexualité et grossesse"},
+{title: "Si je reste", author: "Forman", themes: ["Deuil", "Famille", "Maladie / Handicap", "Suspense", "Tristesse", "Musique"], level: "⭐⭐", location: "Acceptation de soi"},
+{title: "Six potes en 3e", author: "Sophie Laroche", themes: ["Amitié", "Collège/lycée", "Entraide", "Premier amour", "Humour"], level: "⭐⭐❤️", location: "Amitiés inoubliables"},
+{title: "Six potes en seconde", author: "Sophie Laroche", themes: ["Collège/lycée", "Entraide", "Amour passion", "Secret", "Humour"], level: "⭐⭐", location: "Amitiés inoubliables"},
+{title: "Son héroïne", author: "Séverine Vidal", themes: ["Amour passion", "Courage", "Humour", "Harcèlement", "Égalité filles-garçons"], level: "⭐⭐", location: "Médiathèque"},
+{title: "Songe à la douceur", author: "Clémentine Beauvais", themes: ["Humour", "Amour passion", "Secret"], level: "⭐⭐❤️", location: "Dire l'amour - Couple"},
+{title: "Sourde muette aveugle", author: "Helen Keller", themes: ["Maladie / Handicap", "Amitié", "Courage"], level: "⭐⭐", location: "Médiathèque"},
+{title: "Souviens-toi de nous toujours", author: "Sylvie Allouche", themes: ["Famille", "Deuil", "Confidences", "Secret", "Tristesse"], level: "⭐🔊👍", location: "Acceptation de soi"},
+{title: "Sœur aînée", author: "Lilly-Belle de Chollet", themes: ["Famille", "Crise d'adolescence", "Secret", "Conflits"], level: "⭐⭐👍🔊❤️", location: "Dire l'amour - Famille"},
+{title: "Terrienne", author: "Jean-Claude Mourlevat", themes: ["Science-fiction", "Famille", "Amour passion", "Secret"], level: "⭐⭐ ❤️", location: "Médiathèque"},
+{title: "The Breakup Artists", author: "Adriana Mather", themes: ["Famille", "Deuil", "Amour passion", "Secret"], level: "⭐⭐❤️", location: "Amitiés inoubliables"},
+{title: "The Sky Blues", author: "Robbie Couch", themes: ["LGBT", "Amitié", "Amour passion", "Collège/lycée"], level: "⭐⭐", location: "Mieux vivre ensemble"},
+{title: "Tomber les murs", author: "Delphine Pessin", themes: ["Amitié", "Amour passion", "Courage", "Premier amour"], level: "⭐⭐", location: "Vie au collège"},
+{title: "Tour B2 mon amour", author: "Bottero", themes: ["Amour passion", "Collège/lycée", "Secret"], level: "⭐⭐", location: "En ville"},
+{title: "Tristan et Iseult", author: "Anonyme", themes: ["Amour passion", "Secret", "Courage", "Humour"], level: "⭐⭐⭐", location: "Dire l'amour - Couple"},
+{title: "Un Cargo pour Berlin", author: "Fred Paronuzzi", themes: ["Réfugiés", "Secret", "Sexualité", "Courage", "Premier amour"], level: "⭐", location: "Fictions inspirées d'histoires vraies - Réfugiés et migrants"},
+{title: "Un Lien de sang", author: "Favret", themes: ["Famille", "Secret"], level: "⭐⭐", location: "Dire l'amour - Couple"},
+{title: "Un Long dimanche de fiançailles", author: "Sébastien Japrisot", themes: ["Enquête", "Guerre", "Amour passion", "Secret"], level: "⭐⭐⭐", location: "Fictions inspirées d'histoires vraies - Dire la guerre"},
+{title: "Un Secret", author: "Philippe Grimbert", themes: ["Famille", "Secret", "Guerre", "Courage"], level: "⭐⭐⭐❤️", location: "Autobiographies"},
+{title: "Une Bouteille dans la mer de Gaza", author: "Valérie Zenatti", themes: ["Confidences", "Secret", "Courage"], level: "⭐⭐", location: "Fictions inspirées d'histoires vraies - Dire la guerre"},
+{title: "Une Preuve d'amour", author: "Valentine Goby", themes: ["Réfugiés", "Collège/lycée", "Entraide", "Amour passion"], level: "⭐", location: "Fictions inspirées d'histoires vraies - Réfugiés et migrants"},
+{title: "Woke Up Like This", author: "Amy Lea", themes: ["LGBT", "Amitié", "Amour passion", "Secret", "Premier amour"], level: "⭐⭐", location: "Mieux vivre ensemble"},
+{title: "Wonder", author: "R. J. Palacio", themes: ["Amitié", "Maladie / Handicap", "Secret", "Harcèlement"], level: "⭐⭐❤️", location: "Acceptation de soi"},
+{title: "Pablo dans les bois", author: "Myren Duval", themes: ["Maladie / Handicap", "Famille", "Crise d'adolescence", "Conflits", "Premier amour", "Entraide", "Tristesse"], level: "⭐⭐", location: "Acceptation de soi"}
 ];
-const allThemes=[...new Set(books.flatMap(b=>b.themes))].sort((a,b)=>a.localeCompare(b,'fr'));
+const allThemes = ["LGBT", "Amitié", "Amour passion", "Collège/lycée", "Confiance en soi", "Confidences", "Conflits", "Courage", "Crise d'adolescence", "Deuil", "Enquête", "Entraide", "Égalité filles-garçons", "Famille", "Guerre", "Harcèlement", "Humour", "Jalousie", "Maladie / Handicap", "Musique", "Premier amour", "Relation toxique", "Réfugiés", "Rupture", "Science-fiction", "Secret", "Sexualité", "Suspense", "Transidentité", "Tristesse", "Fantastique / Fantasy"].sort((a,b)=>a.localeCompare(b,'fr'));
 let selected=[], shown=5;
 
 const chipsEl=document.getElementById('chips');
@@ -244,7 +357,18 @@ allThemes.forEach(t=>{
 
 function render(){
   const res=document.getElementById('results');
-  if(selected.length===0){res.style.display='none';return;}
+  const hint=document.getElementById('hint');
+  if(selected.length<5){
+    res.style.display='none';
+    if(selected.length===0){ hint.style.display='none'; }
+    else {
+      const r=5-selected.length;
+      hint.style.display='block';
+      hint.textContent=`Encore ${r} thème${r>1?'s':''} à sélectionner pour voir tes suggestions…`;
+    }
+    return;
+  }
+  hint.style.display='none';
   res.style.display='block';
   const scored=books.map(bk=>({...bk,hits:bk.themes.filter(t=>selected.includes(t)).length}))
                     .filter(bk=>bk.hits>0)
@@ -260,12 +384,21 @@ function render(){
     const themes=bk.themes.map(t=>
       selected.includes(t)?`<span class="t-hit">${t}</span>`:`<span class="t-off">${t}</span>`
     ).join('');
+    const notBox=["Médiathèque","Bibliothèque de classe"];
+    const locHtml = !bk.location ? '📦 <strong>—</strong>'
+      : notBox.includes(bk.location)
+        ? `📦 <strong>${bk.location}</strong>`
+        : `📦 dans la boîte <strong>« ${bk.location} »</strong>`;
     const d=document.createElement('div');
     d.className='slip';
     d.innerHTML=`
-      <div class="slip-title">${bk.title}</div>
+      <div class="slip-head">
+        <div class="slip-title">${bk.title}</div>
+        <div class="slip-level">${bk.level||''}</div>
+      </div>
       <div class="slip-author">${bk.author}</div>
       <div class="slip-themes">${themes}</div>
+      <div class="slip-location">${locHtml}</div>
       <div class="posologie">
         <span class="match">✓ ${bk.hits} thème${bk.hits>1?'s':''} correspondant${bk.hits>1?'s':''}</span>
       </div>`;
