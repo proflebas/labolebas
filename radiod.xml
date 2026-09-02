@@ -309,15 +309,59 @@
 <item>
       <title>Episode 26 - RecoDaudet - Les mystères de Byton Cove</title>
       <description>Elise nous recommande la lecture des Mystères de Byton Cove, de Laëtitia Sivi</description>
-      <link>https://labolebas.com/RadioD/Episodes/2526-Archive-LesMysteresDeBytonCove.mp3</link>
-      <enclosure url="https://labolebas.com/RadioD/Episodes/2526-Archive-LesMysteresDeBytonCove.mp3" length="1630726" type="audio/mpeg"/>
-      <guid>https://labolebas.com/RadioD/Episodes/2526-Archive-LesMysteresDeBytonCove.mp3</guid>
+      <link>https://labolebas.com/RadioD/Episodes/2526-RecoDaudet-LesMysteresDeBytonCove.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2526-RecoDaudet-LesMysteresDeBytonCove.mp3" length="1630726" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2526-RecoDaudet-LesMysteresDeBytonCove.mp3</guid>
       <pubDate>Mon, 03 Aug 2026 08:00:00 +0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:duration>01:47</itunes:duration>
 </item>
 
 
+<item>
+      <title>Episode 27 - Archive - Ambassadeurs 6ème à l'école Jean Rostand</title>
+      <description>Les élèves de 6ème sont retournés le temps d'une matinée dans leur ancienne école pour présenter le collège aux futurs CM2</description>
+      <link>https://labolebas.com/RadioD/Episodes/2527-Archive-AmbassadeursRostand.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2527-Archive-AmbassadeursRostand.mp3" length="5929030" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2527-Archive-AmbassadeursRostand.mp3</guid>
+      <pubDate>Mon, 10 Aug 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>06:50</itunes:duration>
+</item>
+
+<item>
+      <title>Episode 28 - RecoDaudet - Men In Black</title>
+      <description>Aurore nous présente la saga MIB</description>
+      <link>https://labolebas.com/RadioD/Episodes/2528-RecoDaudet-MIB.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2528-RecoDaudet-MIB.mp3" length="1680022" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2528-RecoDaudet-MIB.mp3</guid>
+      <pubDate>Mon, 17 Aug 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>01:53</itunes:duration>
+</item>
+
+<item>
+      <title>Episode 29 - Les conseils de classe</title>
+      <description>Emmy, Elise, Manon et Aurore nous expliquent le fonctionnement des conseils de classe dans un collège</description>
+      <link>https://labolebas.com/RadioD/Episodes/2529-Archive-ConseilDeClasse.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2529-Archive-ConseilDeClasse.mp3" length="3347782" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2529-Archive-ConseilDeClasse.mp3</guid>
+      <pubDate>Mon, 24 Aug 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>03:45</itunes:duration>
+</item>
+
+
+<item>
+      <title>Episode 30 - RecoDaudet - Heartstopper</title>
+      <description>Manon nous recommande la lecture de Heartstopper, d'Alice Oseman</description>
+      <link>https://labolebas.com/RadioD/Episodes/2530-RecoDaudet-HeartStopper.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2530-RecoDaudet-HeartStopper.mp3" length="1786630" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2530-RecoDaudet-HeartStopper.mp3</guid>
+      <pubDate>Mon, 31 Aug 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>01:54</itunes:duration>
+</item>
 
   </channel>
 </rss>
