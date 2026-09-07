@@ -363,5 +363,17 @@
       <itunes:duration>01:54</itunes:duration>
 </item>
 
+
+<item>
+      <title>Episode 31 - Archives - Eloquencia</title>
+      <description>Aurore nous raconte les préparations à Eloquencia, le concours d'éloquence auquel a participé le collège</description>
+      <link>https://labolebas.com/RadioD/Episodes/2531-Archive-Eloquencia.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2531-Archive-Eloquencia.mp3" length="5381368" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2531-Archive-Eloquencia.mp3</guid>
+      <pubDate>Mon, 07 Sep 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>06:07</itunes:duration>
+</item>
+
   </channel>
 </rss>
