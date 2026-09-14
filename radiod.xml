@@ -375,5 +375,18 @@
       <itunes:duration>06:07</itunes:duration>
 </item>
 
+
+<item>
+      <title>Episode 32 - RecoDaudet - Twilight</title>
+      <description>Marly nous conseille la saga Twilight</description>
+      <link>https://labolebas.com/RadioD/Episodes/2532-RecoDaudet-Twilight.mp3</link>
+      <enclosure url="https://labolebas.com/RadioD/Episodes/2532-RecoDaudet-Twilight.mp3" length="5381368" type="audio/mpeg"/>
+      <guid>https://labolebas.com/RadioD/Episodes/2532-RecoDaudet-Twilight.mp3</guid>
+      <pubDate>Mon, 14 Sep 2026 08:00:00 +0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>00:45</itunes:duration>
+</item>
+
+
   </channel>
 </rss>
