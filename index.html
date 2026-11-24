@@ -194,6 +194,24 @@
     .doc-links a.jeu::before {
       content: '🎮';
     }
+    
+    .doc-links a.video::before { content: '🎬'; }
+
+.video-embed {
+  margin: 0.5rem 0 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: #000;
+  aspect-ratio: 16 / 9;
+  max-width: 720px;
+}
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
 
     /* Harmonisation des sous-accordéons avec leur parent */
     .panel .sub-accordion {
@@ -951,6 +969,7 @@
         <ul class="doc-links">
 			<li><a href="Documents/4G2 - Théorème de Pythagore.pdf" target="_blank" class="cours">Cours</a></li>
 			<li><a href="https://coopmaths.fr/alea/?uuid=40c47&id=4G20-1&n=5&d=10&s=1&s2=3&s3=false&s4=true&i=1&cd=1&tip=0&uuid=bd660&id=4G20&n=3&d=10&s=3&s2=3&s3=false&s4=true&i=1&cd=1&tip=0&v=eleve&numerique=1&es=111000110&title=4G2%2520-%2520Th%25C3%25A9or%25C3%25A8me%2520de%2520Pythagore" target="_blank" class="sujet">Sujet blanc</a></li>
+			<li><a href="#" class="video" data-video="https://www.youtube-nocookie.com/embed/_e6w5GtkcGI?start=54&rel=0">Vidéo</a></li>
       	</ul>
     </div>
 
@@ -1378,5 +1397,37 @@ const map4e = buildIndex('#quatrieme-by-theme', '4');
   });
 })();
 </script>
+</script>
+
+<script>
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a.video[data-video]');
+  if (!link) return;
+  e.preventDefault();
+
+  const list = link.closest('.doc-links');
+  let box = list.nextElementSibling;
+  const isOpen = box && box.classList.contains('video-embed');
+
+  if (isOpen) {
+    box.remove();
+    link.textContent = 'Vidéo';
+    return;
+  }
+
+  box = document.createElement('div');
+  box.className = 'video-embed';
+  box.innerHTML = `<iframe src="${link.dataset.video}"
+    title="Vidéo : ${link.closest('.sub-panel').previousElementSibling.textContent.trim()}"
+    loading="lazy" allowfullscreen
+    allow="accelerometer; encrypted-media; picture-in-picture; fullscreen"></iframe>`;
+  list.after(box);
+  link.textContent = 'Fermer la vidéo';
+});
+</script>
+</body>
+</html>
+
+
 </body>
 </html>
